@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="" />
+    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605444980730</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="AIO-4: Initial commit with gradle 2.0">
+      <created>1605445222265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605445222265</updated>
+    </task>
+    <task id="LOCAL-00003" summary="AIO-4: Initial commit with gradle 2.0">
+      <created>1605445266613</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605445266613</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,9 +163,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AIO-4: Initial commit with gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-4: Initial commit with gradle" />
+    <MESSAGE value="AIO-4: Initial commit with gradle 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-4: Initial commit with gradle 2.0" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1605445316585">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605445316585" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1605445316583">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605445316583" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1605445316576">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605445316576" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1605445316584">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605445316584" />
+    <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1605444983968">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605444983968" />
     <state x="319" y="62" key="new project wizard" timestamp="1604514710860">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
