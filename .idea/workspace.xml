@@ -23,7 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Giraffe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-java.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +70,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="aio" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="aio" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -68,6 +84,14 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,10 +112,69 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Images" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.43556443" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Images" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/openjfx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/openjfx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.aio [run]">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.openjfx.MainApp" />
+      <module name="aio.main" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib&quot; --add-modules=&quot;javafx.base,javafx.controls,...&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="aio [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="aio [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -102,7 +185,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -110,9 +193,58 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="aio [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainApp" />
+      <item itemvalue="Gradle.aio [build]" />
+      <item itemvalue="Gradle.aio [clean]" />
+      <item itemvalue="Gradle.aio [run]" />
+      <item itemvalue="Gradle.aio [jar]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.aio [run]" />
         <item itemvalue="Gradle.aio [build]" />
+        <item itemvalue="Gradle.aio [jar]" />
+        <item itemvalue="Gradle.aio [clean]" />
+        <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +256,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604514597642</updated>
+      <workItem from="1605647863661" duration="1099000" />
+      <workItem from="1605718520744" duration="4884000" />
+      <workItem from="1605976298713" duration="2221000" />
+      <workItem from="1605978655852" duration="2971000" />
+      <workItem from="1605985024669" duration="3863000" />
+      <workItem from="1605990202247" duration="433000" />
+      <workItem from="1605991854666" duration="1557000" />
+      <workItem from="1605994370249" duration="308000" />
+      <workItem from="1606042585228" duration="3894000" />
+      <workItem from="1606060918477" duration="683000" />
+      <workItem from="1606061717463" duration="12000" />
+      <workItem from="1606061744457" duration="14000" />
+      <workItem from="1606061775428" duration="1527000" />
+      <workItem from="1606070239712" duration="1370000" />
+      <workItem from="1606151721115" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -156,6 +303,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -166,6 +316,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AIO-4: Initial commit with gradle" />
@@ -173,29 +324,97 @@
     <option name="LAST_COMMIT_MESSAGE" value="AIO-4: Initial commit with gradle 2.0" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1605445316585">
+    <state x="208" y="31" width="1198" height="837" key="#Project_Structure" timestamp="1605987962657">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605445316585" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1605445316583">
+    <state x="208" y="31" width="1198" height="837" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1605987962657" />
+    <state x="363" y="102" key="#SSH_Configurations" timestamp="1605719039545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605445316583" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1605445316576">
+    <state x="363" y="102" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605719039545" />
+    <state x="98" y="114" width="1224" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606042980459">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605445316576" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1605445316584">
+    <state x="98" y="114" width="1224" height="669" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1606042980459" />
+    <state x="415" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605987547461">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605445316584" />
+    <state x="415" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605987547461" />
+    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605979934298">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="507" y="162" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1605979934298" />
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1606071327690">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1606071327690" />
+    <state x="551" y="154" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1605978038324">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="551" y="154" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1440.900@0.0.1440.900" timestamp="1605978038324" />
+    <state x="490" y="322" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605988826842">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="490" y="322" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1605988826842" />
+    <state x="258" y="112" key="DBNavigator.ProjectSettingsDialog" timestamp="1605647878630">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="258" y="112" key="DBNavigator.ProjectSettingsDialog/0.0.1440.900@0.0.1440.900" timestamp="1605647878630" />
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom" timestamp="1606153679181">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606153679181" />
+    <state width="1398" height="246" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1605989189419" />
+    <state width="1398" height="183" key="GridCell.Tab.0.center" timestamp="1606153679180">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="183" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606153679180" />
+    <state width="1398" height="246" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
+    <state width="1398" height="183" key="GridCell.Tab.0.left" timestamp="1606153679180">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="183" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606153679180" />
+    <state width="1398" height="246" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
+    <state width="1398" height="183" key="GridCell.Tab.0.right" timestamp="1606153679181">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="183" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606153679181" />
+    <state width="1398" height="246" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605978530289">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605978530289" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605978530288">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605978530288" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605978530287">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605978530287" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605978530288">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605978530288" />
+    <state width="243" height="457" key="HiddenNamespacesPopup" timestamp="1605719880644">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="243" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1605719880644" />
+    <state x="208" y="23" width="1179" height="826" key="SettingsEditor" timestamp="1605985276742">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="208" y="23" width="1179" height="826" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605985276742" />
     <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1605444983968">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605444983968" />
-    <state x="319" y="62" key="new project wizard" timestamp="1604514710860">
+    <state x="319" y="62" width="862" height="674" key="new project wizard" timestamp="1605990717285">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="319" y="62" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1604514710860" />
+    <state x="319" y="62" width="862" height="674" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1605990717285" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606045967774">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606045967774" />
   </component>
 </project>
