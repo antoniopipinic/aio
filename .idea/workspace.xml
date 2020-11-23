@@ -22,18 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0">
-      <change afterPath="$PROJECT_DIR$/Images/Giraffe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-java.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-8: Layoout of login and close button works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +264,7 @@
       <workItem from="1606061744457" duration="14000" />
       <workItem from="1606061775428" duration="1527000" />
       <workItem from="1606070239712" duration="1370000" />
-      <workItem from="1606151721115" duration="1895000" />
+      <workItem from="1606151721115" duration="8387000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -300,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605445462651</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="AIO-8: Layoout of login and close button works">
+      <created>1606153766214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606153766214</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +322,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AIO-4: Initial commit with gradle" />
     <MESSAGE value="AIO-4: Initial commit with gradle 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-4: Initial commit with gradle 2.0" />
+    <MESSAGE value="AIO-8: Layoout of login and close button works" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-8: Layoout of login and close button works" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" width="1198" height="837" key="#Project_Structure" timestamp="1605987962657">
@@ -360,42 +362,50 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="258" y="112" key="DBNavigator.ProjectSettingsDialog/0.0.1440.900@0.0.1440.900" timestamp="1605647878630" />
-    <state width="1398" height="183" key="GridCell.Tab.0.bottom" timestamp="1606153679181">
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom" timestamp="1606159983744">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606153679181" />
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606159983744" />
     <state width="1398" height="246" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1605989189419" />
-    <state width="1398" height="183" key="GridCell.Tab.0.center" timestamp="1606153679180">
+    <state width="1398" height="199" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1606159555708" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center" timestamp="1606159983743">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606153679180" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606159983743" />
     <state width="1398" height="246" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
-    <state width="1398" height="183" key="GridCell.Tab.0.left" timestamp="1606153679180">
+    <state width="1398" height="199" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1606159555707" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left" timestamp="1606159983742">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606153679180" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606159983742" />
     <state width="1398" height="246" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
-    <state width="1398" height="183" key="GridCell.Tab.0.right" timestamp="1606153679181">
+    <state width="1398" height="199" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1606159555706" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right" timestamp="1606159983743">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606153679181" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606159983743" />
     <state width="1398" height="246" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1605989189418" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1605978530289">
+    <state width="1398" height="199" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1606159555707" />
+    <state width="1398" height="114" key="GridCell.Tab.1.bottom" timestamp="1606159983746">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605978530289" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1605978530288">
+    <state width="1398" height="114" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606159983746" />
+    <state width="1398" height="199" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1606159555714" />
+    <state width="1398" height="114" key="GridCell.Tab.1.center" timestamp="1606159983745">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605978530288" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1605978530287">
+    <state width="1398" height="114" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606159983745" />
+    <state width="1398" height="199" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1606159555709" />
+    <state width="1398" height="114" key="GridCell.Tab.1.left" timestamp="1606159983744">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605978530287" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1605978530288">
+    <state width="1398" height="114" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606159983744" />
+    <state width="1398" height="199" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1606159555708" />
+    <state width="1398" height="114" key="GridCell.Tab.1.right" timestamp="1606159983745">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605978530288" />
+    <state width="1398" height="114" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606159983745" />
+    <state width="1398" height="199" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1606159555713" />
     <state width="243" height="457" key="HiddenNamespacesPopup" timestamp="1605719880644">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -404,10 +414,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="23" width="1179" height="826" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605985276742" />
-    <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1605444983968">
+    <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1606153768663">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605444983968" />
+    <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606153768663" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1606157683327">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1606157683327" />
     <state x="319" y="62" width="862" height="674" key="new project wizard" timestamp="1605990717285">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -416,5 +430,16 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606045967774" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

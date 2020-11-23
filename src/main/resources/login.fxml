@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -45,19 +46,15 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="usernameTextField" layoutX="90.0" layoutY="97.0" prefHeight="26.0" prefWidth="246.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="enterPasswordField" layoutX="90.0" layoutY="163.0" prefHeight="23.0" prefWidth="246.0">
+            <TextField fx:id="usernameTextField" layoutX="90.0" layoutY="97.0" prefHeight="26.0" prefWidth="246.0" promptText="Username">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
             <Button id="loginButton" fx:id="loginButton" layoutX="14.0" layoutY="225.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="34.0" prefWidth="349.0" style="-fx-background-color: lightblue;" text="Login" />
             <Button id="loginButton" fx:id="cancelButton" layoutX="14.0" layoutY="275.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="34.0" prefWidth="349.0" style="-fx-background-color: lightblue;" text="Cancel" />
-            <Label fx:id="loginMessageLabel" layoutX="114.0" layoutY="200.0" prefHeight="17.0" prefWidth="186.0" textFill="RED" />
+            <Label fx:id="loginMessageLabel" layoutX="108.0" layoutY="200.0" prefHeight="17.0" prefWidth="234.0" textFill="RED" />
+            <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="163.0" prefHeight="27.0" prefWidth="246.0" promptText="Password" />
          </children>
       </AnchorPane>
    </right>
