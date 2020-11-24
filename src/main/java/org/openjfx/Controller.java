@@ -1,6 +1,9 @@
 package org.openjfx;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -16,6 +19,8 @@ public class Controller {
 
     @FXML
     private Button cancelButton;
+    @FXML
+    private Button loginButton;
     @FXML
     private Label loginMessageLabel;
     @FXML
@@ -43,6 +48,12 @@ public class Controller {
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("You're logged in successfully.");
+
+                    //After Login going to main Page
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
+                    stage.setScene(new Scene(mainWindow));
+
                 }else {
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
