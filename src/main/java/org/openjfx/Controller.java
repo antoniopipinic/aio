@@ -2,12 +2,14 @@ package org.openjfx;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
@@ -49,8 +51,15 @@ public class Controller {
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("You're logged in successfully.");
 
+
+
                     //After Login going to main Page
                     Stage stage = (Stage) loginButton.getScene().getWindow();
+                    //Center Stage on screen - width 866 height 606 manually added
+                    Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+                    stage.setX((screenBounds.getWidth() - 866) / 2);
+                    stage.setY((screenBounds.getHeight() - 606) / 2);
+                    //Show Scene
                     Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
                     stage.setScene(new Scene(mainWindow));
 

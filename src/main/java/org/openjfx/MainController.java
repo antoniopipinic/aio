@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MainController{
@@ -53,6 +54,12 @@ public class MainController{
             public void handle(MouseEvent click) {
 
                 if (click.getClickCount() == 2) {
+                    //Close DB connection
+                    try {
+                        connectDB.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                     //Use ListView's getSelected Item
                     //System.out.println(bookListView.getSelectionModel().getSelectedItem());
                     Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
