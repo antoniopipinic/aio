@@ -51,7 +51,8 @@ public class Controller {
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("You're logged in successfully.");
 
-
+                    //Closing DB connection Jira Ticket AIO-12 TODO Testing
+                    connectDB.close();
 
                     //After Login going to main Page
                     Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -64,6 +65,8 @@ public class Controller {
                     stage.setScene(new Scene(mainWindow));
 
                 }else {
+                    //Close DB Connection AIO-12
+                    connectDB.close();
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
             }

@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DetailPageController {
@@ -27,12 +28,15 @@ public class DetailPageController {
     @FXML
     private Text isbnText;
 
+    private DBConnection connectNow;
+    private Connection connectDB;
+
     @FXML
     protected void initialize() {
 
         //Get DB Connection
-        DBConnection connectNow = new DBConnection();
-        Connection connectDB = connectNow.getConnection();
+        connectNow = new DBConnection();
+        connectDB = connectNow.getConnection();
         //Set SQL command
         String SQLfetch = "SELECT DISTINCT * FROM books WHERE title = '" + Data.getDataString() + "'";
 
@@ -55,6 +59,8 @@ public class DetailPageController {
 
 
         titleText.setText(Data.getDataString());
+        //Closing DB connection
+
 
 
         //Adding Event for Click
@@ -64,6 +70,13 @@ public class DetailPageController {
     //Handle Back Button Click
     EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
         public void handle(ActionEvent event) {
+            //Close DB connection TODO Why try catch?
+            try {
+                connectDB.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
             Stage stage = (Stage) backButton.getScene().getWindow();
             Parent mainWindow = null;
             try {
