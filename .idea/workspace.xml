@@ -30,12 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DatenbankMG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +122,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="aio [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,7 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604514597642</updated>
       <workItem from="1608064532821" duration="5000" />
-      <workItem from="1608137727460" duration="363000" />
+      <workItem from="1608137727460" duration="4400000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -232,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606744406210</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="AIO-6: ADD Page">
+      <created>1608138281039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608138281039</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +289,8 @@
     <MESSAGE value="AIO-8: books Table and listview added" />
     <MESSAGE value="AIO-8: DetailPage added" />
     <MESSAGE value="AIO-8: DetailPage programmed" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-8: DetailPage programmed" />
+    <MESSAGE value="AIO-6: ADD Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-6: ADD Page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="348" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607529324359">
@@ -288,31 +309,31 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606386251483" />
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1607530078088">
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom" timestamp="1608141668862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605445316585" />
-    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607530078088" />
-    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1607530078087">
+    <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608141668862" />
+    <state width="1493" height="176" key="GridCell.Tab.0.center" timestamp="1608141668862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605445316583" />
-    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607530078087" />
-    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1607530078087">
+    <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608141668862" />
+    <state width="1493" height="176" key="GridCell.Tab.0.left" timestamp="1608141668862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605445316576" />
-    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607530078087" />
-    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1607530078088">
+    <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608141668862" />
+    <state width="1493" height="176" key="GridCell.Tab.0.right" timestamp="1608141668862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605445316584" />
-    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607530078088" />
-    <state x="341" y="162" key="Vcs.Push.Dialog.v2" timestamp="1606744420843">
+    <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608141668862" />
+    <state x="341" y="162" key="Vcs.Push.Dialog.v2" timestamp="1608138297316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605444983968" />
-    <state x="341" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606744420843" />
+    <state x="341" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608138297316" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1607529849961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -35,41 +35,24 @@ public class AddPageController {
     @FXML
     private Text errorText;
 
-    private DBConnection connectNow;
-    private Connection connectDB;
-
     @FXML
-    protected void initialize(){
+    protected void initialize() {
         addButton.setOnAction(addButtonEvent);
         cancleButton.setOnAction(cancleButtonEvent);
     }
 
-    EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>(){
+    EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
 
         @Override
         public void handle(ActionEvent event) {
-            connectNow = new DBConnection();
-            connectDB = connectNow.getConnection();
 
-            if (buchtitleTextField.getText().isBlank() || autorTextField.getText().isBlank() || genreTextField.getText().isBlank() || isbnTextField.getText().isBlank()){
+            if (buchtitleTextField.getText().isBlank() || autorTextField.getText().isBlank() || genreTextField.getText().isBlank() || isbnTextField.getText().isBlank()) {
                 errorText.setVisible(true);
-            }else{
-                String SQLfetch = "INSERT INTO books (title,autor,genre,isbn) VALUES ('"+buchtitleTextField.getText()+"','"+autorTextField.getText()+"','"+genreTextField.getText()+"','"+isbnTextField.getText()+"')";
+            } else {
+                String SQLfetch = "INSERT INTO books (title,autor,genre,isbn) VALUES ('" + buchtitleTextField.getText() + "','" + autorTextField.getText() + "','" + genreTextField.getText() + "','" + isbnTextField.getText() + "')";
 
-                Statement statement = null;
-                try {
-                    statement = connectDB.createStatement();
-                    statement.executeUpdate(SQLfetch);
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
+                DatenbankMG.performUpdate(SQLfetch);
 
-                //Close DB connection
-                try {
-                    connectDB.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
 
                 //Go back to main Page
                 Stage stage = (Stage) cancleButton.getScene().getWindow();
@@ -85,7 +68,7 @@ public class AddPageController {
         }
     };
 
-    EventHandler<ActionEvent> cancleButtonEvent = new EventHandler<ActionEvent>(){
+    EventHandler<ActionEvent> cancleButtonEvent = new EventHandler<ActionEvent>() {
 
         @Override
         public void handle(ActionEvent event) {
@@ -97,7 +80,7 @@ public class AddPageController {
                 e.printStackTrace();
             }
             stage.setScene(new Scene(mainWindow));
-            }
+        }
 
     };
 }

@@ -33,14 +33,11 @@ public class MainController{
 
     @FXML
     protected void initialize(){
-        DBConnection connectNow = new DBConnection();
-        Connection connectDB = connectNow.getConnection();
 
         String sqlString = "SELECT * FROM books";
 
         try {
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(sqlString);
+            ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while(queryResult.next()){
                 names.add(queryResult.getString(2));
@@ -59,12 +56,6 @@ public class MainController{
             public void handle(MouseEvent click) {
 
                 if (click.getClickCount() == 2) {
-                    //Close DB connection
-                    try {
-                        connectDB.close();
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    }
                     //Use ListView's getSelected Item
                     //System.out.println(bookListView.getSelectionModel().getSelectedItem());
                     Data.setDataString(bookListView.getSelectionModel().getSelectedItem());

@@ -28,21 +28,16 @@ public class DetailPageController {
     @FXML
     private Text isbnText;
 
-    private DBConnection connectNow;
-    private Connection connectDB;
 
     @FXML
     protected void initialize() {
 
-        //Get DB Connection
-        connectNow = new DBConnection();
-        connectDB = connectNow.getConnection();
         //Set SQL command
         String SQLfetch = "SELECT DISTINCT * FROM books WHERE title = '" + Data.getDataString() + "'";
 
         try {
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(SQLfetch);
+
+            ResultSet queryResult = DatenbankMG.performQuery(SQLfetch);
 
 
             while (queryResult.next()) {
@@ -62,7 +57,6 @@ public class DetailPageController {
         //Closing DB connection
 
 
-
         //Adding Event for Click
         backButton.setOnAction(backButtonEvent);
     }
@@ -70,12 +64,6 @@ public class DetailPageController {
     //Handle Back Button Click
     EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
         public void handle(ActionEvent event) {
-            //Close DB connection TODO Why try catch?
-            try {
-                connectDB.close();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
 
             Stage stage = (Stage) backButton.getScene().getWindow();
             Parent mainWindow = null;

@@ -15,7 +15,11 @@ public class Data {
     }
 
     public static String getDataString() {
-        return dataString;
+        if (!dataString.isBlank()) {
+            return dataString;
+        }else{
+            return "No Data";
+        }
     }
 
     public static int getDataInt() {

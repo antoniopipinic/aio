@@ -40,19 +40,16 @@ public class Controller {
     }
 
     private void validLogin() {
-        DBConnection connectNow = new DBConnection();
-        Connection connectDB = connectNow.getConnection();
+
         String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordField.getText() + "'";
         try {
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
+            //Database management for login
+            ResultSet queryResult = DatenbankMG.performQuery(verifyLogin);
 
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("You're logged in successfully.");
 
-                    //Closing DB connection Jira Ticket AIO-12 TODO Testing
-                    connectDB.close();
 
                     //After Login going to main Page
                     Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -62,11 +59,10 @@ public class Controller {
                     stage.setY((screenBounds.getHeight() - 606) / 2);
                     //Show Scene
                     Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
+                    //stage.setResizable(true);
                     stage.setScene(new Scene(mainWindow));
 
                 }else {
-                    //Close DB Connection AIO-12
-                    connectDB.close();
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
             }

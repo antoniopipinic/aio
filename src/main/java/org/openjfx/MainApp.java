@@ -13,6 +13,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        DatenbankMG.connectToDB();
         Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
         primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.setScene(new Scene(root, 600, 400));
