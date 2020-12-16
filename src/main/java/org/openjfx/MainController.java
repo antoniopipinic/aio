@@ -2,6 +2,7 @@ package org.openjfx;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.fxml.Initializable;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -26,6 +28,9 @@ public class MainController{
     ObservableList<String> names = FXCollections.observableArrayList();
     @FXML
     private ListView<String> bookListView = new ListView<String>();
+    @FXML
+    private Button addButton;
+
     @FXML
     protected void initialize(){
         DBConnection connectNow = new DBConnection();
@@ -65,17 +70,31 @@ public class MainController{
                     Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
 
                     Stage stage = (Stage) bookListView.getScene().getWindow();
-                    Parent mainWindow = null;
+                    Parent detailPage = null;
                     try {
-                        mainWindow = FXMLLoader.load(getClass().getResource("/detailPage.fxml"));
+                        detailPage = FXMLLoader.load(getClass().getResource("/detailPage.fxml"));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    stage.setScene(new Scene(mainWindow));
+                    stage.setScene(new Scene(detailPage));
                 }
             }
         });
-    }
 
+        addButton.setOnAction(addButtonEvent);
+    }
+EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+        Stage stage = (Stage) bookListView.getScene().getWindow();
+        Parent detailPage = null;
+        try {
+            detailPage = FXMLLoader.load(getClass().getResource("/addPage.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(detailPage));
+    }
+};
 
 }

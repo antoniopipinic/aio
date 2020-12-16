@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="606.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.AddPageController">
+   <children>
+      <Text layoutX="91.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="buchtitleTextField" layoutX="221.0" layoutY="96.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="91.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="autorTextField" layoutX="221.0" layoutY="162.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="91.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="genreTextField" layoutX="221.0" layoutY="228.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="408.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="isbnTextField" layoutX="172.0" layoutY="361.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Button fx:id="cancleButton" layoutX="396.0" layoutY="546.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Abbrechen" />
+      <Button fx:id="addButton" layoutX="352.0" layoutY="469.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="163.0" style="-fx-background-radius: 30;" text="Buch hinzufügen">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fx:id="errorText" fill="RED" layoutX="356.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte füllen Sie alle Felder aus" visible="false" />
+   </children>
+</AnchorPane>

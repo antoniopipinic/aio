@@ -5,7 +5,9 @@ public class Data {
     private static int dataInt = 0;
 
     public static void setDataString(String string){
-        dataString = string;
+        if (string != null && !string.isBlank()) {
+            dataString = string;
+        }
     }
 
     public static void setDataInt(int dataInt) {
