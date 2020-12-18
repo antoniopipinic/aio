@@ -1,11 +1,11 @@
-package org.openjfx;
+package helper;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DatenbankMG {
+public final class DatenbankMG {
     private static DBConnection connectNow;
     private static Connection connectDB;
 

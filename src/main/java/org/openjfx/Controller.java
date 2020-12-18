@@ -1,5 +1,8 @@
 package org.openjfx;
 
+import helper.DatenbankMG;
+import helper.WindowMover;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -9,13 +12,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class Controller {
 
@@ -30,10 +32,11 @@ public class Controller {
     @FXML
     private PasswordField passwordField;
 
-    public void loginButtonOnAction(ActionEvent event){
-        if(!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()){
+
+    public void loginButtonOnAction(ActionEvent event) {
+        if (!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()) {
             validLogin();
-        }else {
+        } else {
             loginMessageLabel.setText("Please enter username and password!");
         }
 
@@ -46,8 +49,8 @@ public class Controller {
             //Database management for login
             ResultSet queryResult = DatenbankMG.performQuery(verifyLogin);
 
-            while(queryResult.next()){
-                if(queryResult.getInt(1) == 1){
+            while (queryResult.next()) {
+                if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("You're logged in successfully.");
 
 
@@ -57,24 +60,24 @@ public class Controller {
                     Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
                     stage.setX((screenBounds.getWidth() - 866) / 2);
                     stage.setY((screenBounds.getHeight() - 606) / 2);
-                    //Show Scene
                     Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-                    //stage.setResizable(true);
                     stage.setScene(new Scene(mainWindow));
 
-                }else {
+                    WindowMover.loadResource(mainWindow);
+                    WindowMover.loadStage(stage);
+                } else {
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
             }
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
 
     }
 
-    public void cancelButtonOnAction(ActionEvent event){
+    public void cancelButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }

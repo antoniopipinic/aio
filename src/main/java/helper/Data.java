@@ -1,6 +1,6 @@
-package org.openjfx;
+package helper;
 
-public class Data {
+public final class Data {
     private static String dataString = "";
     private static int dataInt = 0;
 
