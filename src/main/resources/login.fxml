@@ -22,7 +22,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="cancelButton" layoutX="219.0" layoutY="258.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Cancle">
+            <Button fx:id="cancelButton" layoutX="219.0" layoutY="258.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Cancel">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
