@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -30,10 +31,14 @@ public class MainController {
     private Button addButton;
     @FXML
     private ImageView offIMG;
+    @FXML
+    private Button editButton;
+    @FXML
+    private Label warningText;
 
     @FXML
     protected void initialize() {
-
+        warningText.setVisible(false);
         String sqlString = "SELECT * FROM books";
         //Getting all Books from DB
         try {
@@ -71,8 +76,11 @@ public class MainController {
         });
 
         addButton.setOnAction(addButtonEvent);
+        editButton.setOnAction(editButtonEvent);
+
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
+
     }
 
     private final EventHandler<Event> offClickedEvent = new EventHandler() {
@@ -83,7 +91,28 @@ public class MainController {
             stage.close();
         }
     };
+    private final EventHandler<ActionEvent> editButtonEvent = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            Stage stage = (Stage) bookListView.getScene().getWindow();
+            Parent detailPage = null;
+            try {
+                detailPage = FXMLLoader.load(getClass().getResource("/editPage.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //passing selected book to the editpage
+            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+            //warning when there is no book selected
+            if (bookListView.getSelectionModel().getSelectedItem() == null){
+                warningText.setVisible(true);
+            }
+            else {
+                stage.setScene(new Scene(detailPage));
+            }
 
+        }
+    };
     private final EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
