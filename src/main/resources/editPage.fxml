@@ -11,15 +11,15 @@
       <TextField fx:id="genrenew" layoutX="319.0" layoutY="168.0" />
       <TextField fx:id="titlenew" layoutX="319.0" layoutY="83.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="22.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel" />
-      <Text layoutX="22.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
-      <Text layoutX="22.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
+      <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel" />
+      <Text layoutX="22.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
+      <Text layoutX="21.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
       <Text layoutX="133.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aktuell" wrappingWidth="61.13671875" />
       <Text layoutX="382.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neu" />
       <Button fx:id="savenbutton" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#save" text="Save" />
       <Button fx:id="cancelnbutton" layoutX="259.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-      <Text fx:id="titletext" layoutX="73.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="titleauthor" layoutX="68.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="titlegenre" layoutX="57.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="titletext" layoutX="76.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="titleauthor" layoutX="73.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="titlegenre" layoutX="68.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
    </children>
 </AnchorPane>
