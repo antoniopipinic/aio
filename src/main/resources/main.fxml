@@ -29,7 +29,7 @@
                     </image>
                 </ImageView>
             <ListView fx:id="bookListView" layoutX="266.0" layoutY="31.0" prefHeight="534.0" prefWidth="529.0" />
-            <Button layoutX="79.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Löschen">
+            <Button fx:id="deleteButton" layoutX="79.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Löschen">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>

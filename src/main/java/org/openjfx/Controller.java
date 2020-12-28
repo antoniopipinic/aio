@@ -23,7 +23,7 @@ import java.sql.ResultSet;
 
 public class Controller {
 
-    @FXML
+    @FXML // FXML - Bezeichung für graphischen Output, @FXML definiert das diese Objekt im entsprechende fxml File ist
     private Button cancelButton;
     @FXML
     private Button loginButton;

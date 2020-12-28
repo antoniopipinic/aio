@@ -34,6 +34,8 @@ public class MainController {
     @FXML
     private Button editButton;
     @FXML
+    private Button deleteButton;
+    @FXML
     private Label warningText;
 
     @FXML
@@ -77,6 +79,7 @@ public class MainController {
 
         addButton.setOnAction(addButtonEvent);
         editButton.setOnAction(editButtonEvent);
+        deleteButton.setOnAction(deleteButtonEvent);
 
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
@@ -124,6 +127,28 @@ public class MainController {
                 e.printStackTrace();
             }
             stage.setScene(new Scene(detailPage));
+        }
+    };
+    private final EventHandler<ActionEvent> deleteButtonEvent = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            Stage stage = (Stage) bookListView.getScene().getWindow();
+            Parent detailPage = null;
+            try {
+                detailPage = FXMLLoader.load(getClass().getResource("/deletePage.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //passing selected book to the editpage
+            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+            //warning when there is no book selected
+            if (bookListView.getSelectionModel().getSelectedItem() == null){
+                warningText.setVisible(true);
+            }
+            else {
+                stage.setScene(new Scene(detailPage));
+            }
+
         }
     };
 
