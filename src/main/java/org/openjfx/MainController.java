@@ -86,7 +86,7 @@ public class MainController {
 
     }
 
-    private final EventHandler<Event> offClickedEvent = new EventHandler() {
+    private final EventHandler offClickedEvent = new EventHandler() {
         @Override
         public void handle(Event event) {
             //Event that closes the stage

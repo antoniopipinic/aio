@@ -63,7 +63,9 @@ public class Controller {
                     stage.setX((screenBounds.getWidth() - 866) / 2);
                     stage.setY((screenBounds.getHeight() - 606) / 2);
                     Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-                    stage.setScene(new Scene(mainWindow));
+                    Scene scene = new Scene(mainWindow);
+                    scene.setFill(Color.TRANSPARENT);
+                    stage.setScene(scene);
 
                     WindowMover.loadResource(mainWindow);
                     WindowMover.loadStage(stage);
