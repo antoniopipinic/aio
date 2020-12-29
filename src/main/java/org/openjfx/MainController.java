@@ -97,6 +97,8 @@ public class MainController {
     private final EventHandler<ActionEvent> editButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
+            //passing selected book to the editpage
+            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
             Stage stage = (Stage) bookListView.getScene().getWindow();
             Parent detailPage = null;
             try {
@@ -104,8 +106,7 @@ public class MainController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //passing selected book to the editpage
-            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+
             //warning when there is no book selected
             if (bookListView.getSelectionModel().getSelectedItem() == null){
                 warningText.setVisible(true);
@@ -132,6 +133,8 @@ public class MainController {
     private final EventHandler<ActionEvent> deleteButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
+            //passing selected book to the deletepage
+            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
             Stage stage = (Stage) bookListView.getScene().getWindow();
             Parent detailPage = null;
             try {
@@ -139,8 +142,8 @@ public class MainController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //passing selected book to the editpage
-            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+
+
             //warning when there is no book selected
             if (bookListView.getSelectionModel().getSelectedItem() == null){
                 warningText.setVisible(true);

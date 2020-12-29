@@ -29,7 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0" />
+    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="File Push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,19 +119,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="aio [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,6 +178,8 @@
       <updated>1604514597642</updated>
       <workItem from="1608064532821" duration="5000" />
       <workItem from="1608137727460" duration="363000" />
+      <workItem from="1609242864534" duration="609000" />
+      <workItem from="1609244133774" duration="2593000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -250,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609169383239</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="File Push">
+      <created>1609169566383</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609169566383</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +289,7 @@
     <MESSAGE value="AIO-8: DetailPage added" />
     <MESSAGE value="AIO-8: DetailPage programmed" />
     <MESSAGE value="Implement DeletePageController Class &amp; FXML File deletePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement DeletePageController Class &amp; FXML File deletePage" />
+    <MESSAGE value="File Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="File Push" />
   </component>
 </project>
