@@ -8,22 +8,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.EditPageController">
    <children>
-      <TextField fx:id="authornew" layoutX="319.0" layoutY="123.0" />
-      <TextField fx:id="genrenew" layoutX="319.0" layoutY="168.0" />
-      <TextField fx:id="titlenew" layoutX="319.0" layoutY="83.0" />
+      <TextField fx:id="titleTextField" layoutX="116.0" layoutY="83.0" prefHeight="25.0" prefWidth="391.0" />
+      <TextField fx:id="genreTextField" layoutX="116.0" layoutY="168.0" prefHeight="25.0" prefWidth="391.0" />
+      <TextField fx:id="authorTextField" layoutX="116.0" layoutY="123.0" prefHeight="25.0" prefWidth="391.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel" />
       <Text layoutX="22.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
       <Text layoutX="21.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
-      <Text layoutX="133.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aktuell" wrappingWidth="61.13671875" />
-      <Text layoutX="382.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neu" />
-      <Button fx:id="savenbutton" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#save" text="Save" />
-      <Button fx:id="cancelbutton" layoutX="259.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-      <Text fx:id="currenttitle" layoutX="76.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="currentauthor" layoutX="73.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="currentgenre" layoutX="68.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <TextField fx:id="ISBNnew" layoutX="319.0" layoutY="208.0" />
-      <Text fx:id="currentISBN" layoutX="57.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Button fx:id="savenbutton" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button fx:id="cancelbutton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <TextField fx:id="ISBNTextField" layoutX="116.0" layoutY="208.0" prefHeight="25.0" prefWidth="391.0" />
       <Text layoutX="21.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
       <Label fx:id="errorText" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" />
    </children>

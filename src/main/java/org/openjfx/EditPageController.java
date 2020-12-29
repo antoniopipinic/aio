@@ -5,48 +5,39 @@ import helper.DatenbankMG;
 import helper.WindowMover;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.stage.Screen;
+
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.ResultSet;
 
 public class EditPageController {
+
     @FXML
-    private Text currenttitle;
+    private TextField titleTextField;
     @FXML
-    private Text currentauthor;
+    private TextField authorTextField;
     @FXML
-    private Text currentgenre;
+    private TextField genreTextField;
     @FXML
-    private Text currentISBN;
-    @FXML
-    private TextField titlenew;
-    @FXML
-    private TextField authornew;
-    @FXML
-    private TextField genrenew;
-    @FXML
-    private TextField ISBNnew;
+    private TextField ISBNTextField;
     @FXML
     private Label errorText;
     @FXML
     private void save(){
-        if (titlenew.getText().isBlank() ||authornew.getText().isBlank() || genrenew.getText().isBlank() || ISBNnew.getText().isBlank()) {
+        if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
             errorText.setVisible(true);
         } else {
-            String SQLfetch = "UPDATE books SET title='"+titlenew.getText()+"',autor='"+authornew.getText()+"',genre='"+genrenew.getText()+"',isbn='"+ISBNnew.getText()+"'WHERE title='"+Data.getDataString()+ "';";
+            String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"'WHERE title='"+Data.getDataString()+ "';";
             DatenbankMG.performUpdate(SQLfetch);
 
 
             //Go back to main Page
-            Stage stage = (Stage) currenttitle.getScene().getWindow();
+            Stage stage = (Stage) titleTextField.getScene().getWindow();
             Parent mainWindow = null;
             try {
                 mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
@@ -60,17 +51,18 @@ public class EditPageController {
 
     @FXML
     protected void initialize() {           //initialize Methode wird immer aufgerufen wenn neue Scene aufgemacht wird
-        currenttitle.setText(Data.getDataString());
         String sqlString = "SELECT * FROM books WHERE title='"+Data.getDataString()+"';";
         //Getting all Books from DB
         try {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while (queryResult.next()) {
-                currentauthor.setText(queryResult.getString(3));
-                currentgenre.setText(queryResult.getString(4));
-                currentISBN.setText(queryResult.getString(5));
+                titleTextField.setText(queryResult.getString(2));
+                authorTextField.setText(queryResult.getString(3));
+                genreTextField.setText(queryResult.getString(4));
+                ISBNTextField.setText(queryResult.getString(5));
             }
+            titleTextField.requestFocus();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,7 +72,7 @@ public class EditPageController {
 
     @FXML
     private void cancel(){
-        Stage stage = (Stage) titlenew.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
+        Stage stage = (Stage) titleTextField.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
         Parent mainWindow = null;
         try {
             mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
