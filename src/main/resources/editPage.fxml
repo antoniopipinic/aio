@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
@@ -17,9 +18,13 @@
       <Text layoutX="133.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aktuell" wrappingWidth="61.13671875" />
       <Text layoutX="382.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neu" />
       <Button fx:id="savenbutton" layoutX="259.0" layoutY="246.0" mnemonicParsing="false" onAction="#save" text="Save" />
-      <Button fx:id="cancelnbutton" layoutX="259.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-      <Text fx:id="titletext" layoutX="76.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="titleauthor" layoutX="73.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
-      <Text fx:id="titlegenre" layoutX="68.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Button fx:id="cancelbutton" layoutX="259.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Text fx:id="currenttitle" layoutX="76.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="currentauthor" layoutX="73.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="currentgenre" layoutX="68.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <TextField fx:id="ISBNnew" layoutX="319.0" layoutY="208.0" />
+      <Text fx:id="currentISBN" layoutX="57.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text layoutX="21.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+      <Label fx:id="errorText" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" />
    </children>
 </AnchorPane>
