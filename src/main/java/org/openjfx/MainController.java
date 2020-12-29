@@ -47,7 +47,7 @@ public class MainController {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while (queryResult.next()) {
-                names.add(queryResult.getString(2));
+                names.add(queryResult.getString(2));//
             }
 
         } catch (Exception e) {

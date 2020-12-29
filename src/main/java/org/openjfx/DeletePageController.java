@@ -27,7 +27,7 @@ public class DeletePageController {
 
     @FXML
     protected void initialize() {           //initialize Methode wird immer aufgerufen wenn neue Scene aufgemacht wird
-        booktitle.setText("Wollen Sie " + Data.getDataString() + " wirklich l\u00f6schen?");
+        booktitle.setText("Wollen Sie '" + Data.getDataString() + "' wirklich l\u00f6schen?");
 
     }
     @FXML

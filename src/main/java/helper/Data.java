@@ -16,7 +16,7 @@ public final class Data {
 
     public static String getDataString() {
         if (!dataString.isBlank()) {
-            return dataString;
+            return dataString;//
         }else{
             return "No Data";
         }
