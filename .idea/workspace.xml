@@ -22,18 +22,14 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-4: Initial commit with gradle 2.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +143,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -166,7 +164,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606744406210</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement DeletePageController Class &amp; FXML File deletePage">
+      <created>1609169383239</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609169383239</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,28 +287,7 @@
     <MESSAGE value="AIO-8: books Table and listview added" />
     <MESSAGE value="AIO-8: DetailPage added" />
     <MESSAGE value="AIO-8: DetailPage programmed" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-8: DetailPage programmed" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="2561" height="211" key="GridCell.Tab.0.bottom" timestamp="1609169616870">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2561" height="211" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.104.1920.1040@0.0.2560.1400" timestamp="1609169616870" />
-    <state width="2561" height="211" key="GridCell.Tab.0.center" timestamp="1609169616870">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2561" height="211" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.104.1920.1040@0.0.2560.1400" timestamp="1609169616870" />
-    <state width="2561" height="211" key="GridCell.Tab.0.left" timestamp="1609169616870">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2561" height="211" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.104.1920.1040@0.0.2560.1400" timestamp="1609169616870" />
-    <state width="2561" height="211" key="GridCell.Tab.0.right" timestamp="1609169616870">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2561" height="211" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.104.1920.1040@0.0.2560.1400" timestamp="1609169616870" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1609169607298">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.104.1920.1040@0.0.2560.1400" timestamp="1609169607298" />
+    <MESSAGE value="Implement DeletePageController Class &amp; FXML File deletePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement DeletePageController Class &amp; FXML File deletePage" />
   </component>
 </project>

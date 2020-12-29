@@ -9,7 +9,6 @@
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Button fx:id="acceptbutton" layoutX="153.0" layoutY="231.0" mnemonicParsing="false" onAction="#accept" text="Accept" />
       <Button fx:id="cancelnbutton" layoutX="330.0" layoutY="231.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-      <Text fx:id="titletext" layoutX="153.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wollen Sie ... wirklich löschen?" wrappingWidth="242.13671875" />
-      <Text fx:id="booktitle" layoutX="209.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="242.13671875" />
+      <Text fx:id="booktitle" layoutX="142.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="253.13671875" />
    </children>
 </AnchorPane>
