@@ -30,11 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="File Push">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,6 +176,7 @@
       <updated>1604514597642</updated>
       <workItem from="1608064532821" duration="5000" />
       <workItem from="1608137727460" duration="363000" />
+      <workItem from="1609330656953" duration="3005000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -244,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609169383239</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="AIO-25: visual improvements">
+      <created>1609252193117</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609252193117</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +286,7 @@
     <MESSAGE value="AIO-8: DetailPage added" />
     <MESSAGE value="AIO-8: DetailPage programmed" />
     <MESSAGE value="Implement DeletePageController Class &amp; FXML File deletePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement DeletePageController Class &amp; FXML File deletePage" />
+    <MESSAGE value="AIO-25: visual improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-25: visual improvements" />
   </component>
 </project>

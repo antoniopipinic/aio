@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DeletePageController">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="781.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DeletePageController">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button fx:id="acceptbutton" layoutX="238.0" layoutY="210.0" mnemonicParsing="false" onAction="#accept" prefHeight="38.0" prefWidth="94.0" text="Accept">
+      <Button fx:id="acceptbutton" layoutX="330.0" layoutY="346.0" mnemonicParsing="false" onAction="#accept" prefHeight="60.0" prefWidth="145.0" stylesheets="@../../../../../Desktop/button.css" text="Accept">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="cancelnbutton" layoutX="259.0" layoutY="277.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
-      <Text fx:id="booktitle" layoutX="41.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="488.13671875">
+      <Button fx:id="cancelnbutton" layoutX="363.0" layoutY="444.0" mnemonicParsing="false" onAction="#cancel" prefHeight="37.0" prefWidth="79.0" text="Cancel" />
+      <Text fx:id="booktitle" layoutX="41.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="722.13671875">
          <font>
-            <Font size="15.0" />
+            <Font size="20.0" />
          </font></Text>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="581.0" layoutY="3.0">
+         <image>
+            <Image url="@../../../../../Desktop/Giraffe.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
