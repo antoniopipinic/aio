@@ -10,7 +10,7 @@
 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="781.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DeletePageController">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button fx:id="acceptbutton" layoutX="330.0" layoutY="346.0" mnemonicParsing="false" onAction="#accept" prefHeight="60.0" prefWidth="145.0" stylesheets="@../../../../../Desktop/button.css" text="Accept">
+      <Button fx:id="acceptbutton" layoutX="330.0" layoutY="346.0" mnemonicParsing="false" onAction="#accept" prefHeight="60.0" prefWidth="145.0" text="Accept">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>

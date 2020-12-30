@@ -18,14 +18,14 @@ public class SearchPageController {
     @FXML
     private Button cancelbutton;
     @FXML
-    private Text searchText;
+    private Text keywordText;
     @FXML
     private TextField searchTextField ;
 
 
     @FXML
     private void cancel() {
-        Stage stage = (Stage) searchText.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
+        Stage stage = (Stage) keywordText.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
         Parent mainWindow = null;
         try {
             mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
