@@ -1,6 +1,7 @@
 package org.openjfx;
 
 import helper.WindowMover;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +21,15 @@ public class SearchPageController {
     @FXML
     private Text keywordText;
     @FXML
-    private TextField searchTextField ;
+    private TextField searchTextField;
+    @FXML
+    private TextField titleTextField;
+    @FXML
+    private TextField authorTextField;
+    @FXML
+    private TextField genreTextField;
+    @FXML
+    private TextField isbnTextField;
 
 
     @FXML
@@ -36,6 +45,19 @@ public class SearchPageController {
 
         WindowMover.loadResource(mainWindow);
         WindowMover.loadStage(stage);
+    }
+
+    public void search(ActionEvent event) {
+        String keyword = searchTextField.getText();
+        String title = titleTextField.getText();
+        String author = authorTextField.getText();
+        String genre = genreTextField.getText();
+        String isbn = isbnTextField.getText();
+
+
+
+
+
     }
 
 }
