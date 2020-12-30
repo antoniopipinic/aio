@@ -37,6 +37,8 @@ public class MainController {
     private Button deleteButton;
     @FXML
     private Label warningText;
+    @FXML
+    private Button searchButton;
 
     @FXML
     protected void initialize() {
@@ -80,6 +82,7 @@ public class MainController {
         addButton.setOnAction(addButtonEvent);
         editButton.setOnAction(editButtonEvent);
         deleteButton.setOnAction(deleteButtonEvent);
+        searchButton.setOnAction(searchButtonEvent);
 
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
@@ -93,6 +96,25 @@ public class MainController {
             Stage stage = (Stage) addButton.getScene().getWindow();
             stage.close();
         }
+    };
+    private final EventHandler<ActionEvent> searchButtonEvent = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            //passing selected book to the editpage
+            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+            Stage stage = (Stage) bookListView.getScene().getWindow();
+            Parent detailPage = null;
+            try {
+                detailPage = FXMLLoader.load(getClass().getResource("/searchPage.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+                stage.setScene(new Scene(detailPage));
+            }
+
+
     };
     private final EventHandler<ActionEvent> editButtonEvent = new EventHandler<ActionEvent>() {
         @Override

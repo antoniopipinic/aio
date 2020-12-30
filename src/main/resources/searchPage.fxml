@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SearchPageController">
+   <children>
+      <TextField fx:id="searchTextField" layoutX="105.0" layoutY="193.0" prefHeight="25.0" prefWidth="391.0" />
+      <Button fx:id="searchbutton" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Search" />
+      <Text fx:id="searchText" layoutX="105.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte Buch etc angeben:" wrappingWidth="313.13671875" />
+      <Button fx:id="cancelbutton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="52.0" text="Cancel" />
+      <Label fx:id="errorText" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" />
+      <ImageView fitHeight="257.0" fitWidth="265.0" layoutX="343.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/Giraffe.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

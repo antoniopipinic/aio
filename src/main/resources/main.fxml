@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -22,11 +14,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="866.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.MainController">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="866.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.MainController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="781.0">
             <children>
-                <Button fx:id="addButton" layoutX="81.0" layoutY="281.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Hinzufügen">
+                <Button fx:id="addButton" layoutX="81.0" layoutY="259.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Hinzufügen">
                     <font>
                         <Font name="Calibri" size="18.0" />
                     </font>
@@ -37,12 +29,12 @@
                     </image>
                 </ImageView>
             <ListView fx:id="bookListView" layoutX="266.0" layoutY="31.0" prefHeight="534.0" prefWidth="529.0" />
-            <Button fx:id="deleteButton" layoutX="79.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Löschen">
+            <Button fx:id="deleteButton" layoutX="79.0" layoutY="310.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Löschen">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="editButton" layoutX="79.0" layoutY="406.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Bearbeiten">
+            <Button fx:id="editButton" layoutX="79.0" layoutY="364.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Bearbeiten">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
@@ -62,6 +54,11 @@
                      </stops>
                   </LinearGradient>
                </textFill>
+            </Button>
+            <Button fx:id="searchButton" layoutX="79.0" layoutY="417.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Suchen">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
             </Button>
             <ImageView fx:id="offIMG" fitHeight="32.0" fitWidth="21.0" layoutX="829.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
