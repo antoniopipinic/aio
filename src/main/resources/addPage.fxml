@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="606.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.AddPageController">
+<AnchorPane prefHeight="401.0" prefWidth="866.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.AddPageController">
    <children>
       <Text layoutX="91.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="buchtitleTextField" layoutX="221.0" layoutY="96.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
-      <Text layoutX="91.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor">
+      <TextField fx:id="buchtitleTextField" layoutX="187.0" layoutY="100.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="95.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="autorTextField" layoutX="221.0" layoutY="162.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
-      <Text layoutX="91.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
+      <TextField fx:id="autorTextField" layoutX="187.0" layoutY="166.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="92.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="genreTextField" layoutX="221.0" layoutY="228.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
-      <Text layoutX="408.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN">
+      <TextField fx:id="genreTextField" layoutX="187.0" layoutY="223.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text layoutX="97.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="isbnTextField" layoutX="172.0" layoutY="361.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
-      <Button fx:id="cancleButton" layoutX="396.0" layoutY="546.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Abbrechen" />
-      <Button fx:id="addButton" layoutX="352.0" layoutY="469.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="163.0" style="-fx-background-radius: 30;" text="Buch hinzufügen">
+      <TextField fx:id="isbnTextField" layoutX="187.0" layoutY="284.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
+      <Text fx:id="errorText" fill="RED" layoutX="356.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte füllen Sie alle Felder aus" visible="false" />
+      <Button fx:id="addButton" layoutX="221.0" layoutY="350.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Buch hinzufügen">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Text fx:id="errorText" fill="RED" layoutX="356.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte füllen Sie alle Felder aus" visible="false" />
+      <Button fx:id="cancelButton" layoutX="433.0" layoutY="350.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Abbrechen">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="schlagwortText1" layoutX="194.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Hinzufügen" wrappingWidth="286.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

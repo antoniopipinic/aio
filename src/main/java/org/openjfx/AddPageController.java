@@ -28,14 +28,14 @@ public class AddPageController {
     @FXML
     private Button addButton;
     @FXML
-    private Button cancleButton;
+    private Button cancelButton;
     @FXML
     private Text errorText;
 
     @FXML
     protected void initialize() {
         addButton.setOnAction(addButtonEvent);
-        cancleButton.setOnAction(cancleButtonEvent);
+        cancelButton.setOnAction(cancelButtonEvent);
     }
 
     EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
@@ -52,7 +52,7 @@ public class AddPageController {
 
 
                 //Go back to main Page
-                Stage stage = (Stage) cancleButton.getScene().getWindow();
+                Stage stage = (Stage) cancelButton.getScene().getWindow();
                 Parent mainWindow = null;
                 try {
                     mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
@@ -65,11 +65,11 @@ public class AddPageController {
         }
     };
 
-    EventHandler<ActionEvent> cancleButtonEvent = new EventHandler<ActionEvent>() {
+    EventHandler<ActionEvent> cancelButtonEvent = new EventHandler<ActionEvent>() {
 
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) cancleButton.getScene().getWindow();
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
             Parent mainWindow = null;
             try {
                 mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));

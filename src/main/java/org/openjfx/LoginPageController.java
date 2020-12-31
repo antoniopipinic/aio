@@ -19,14 +19,17 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 
-public class Controller {
+public class LoginPageController {
 
     @FXML // FXML - Bezeichung für graphischen Output, @FXML definiert das diese Objekt im entsprechende fxml File ist
     private Button cancelButton;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button registerButton;
     @FXML
     private Label loginMessageLabel;
     @FXML
@@ -54,7 +57,6 @@ public class Controller {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("You're logged in successfully.");
-
 
                     //After Login going to main Page
                     Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -86,5 +88,14 @@ public class Controller {
         stage.close();
     }
 
-
+    public void registerButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) registerButton.getScene().getWindow();
+        Parent registerPage = null;
+        try {
+            registerPage = FXMLLoader.load(getClass().getResource("/registerPage.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setScene(new Scene(registerPage));
+    }
 }

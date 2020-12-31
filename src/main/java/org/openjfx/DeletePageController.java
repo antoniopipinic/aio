@@ -21,7 +21,7 @@ public class DeletePageController {
     @FXML
     private Text booktitle;
     @FXML
-    private Button cancelnbutton;
+    private Button cancelbutton;
     @FXML
     private void save(){}
 

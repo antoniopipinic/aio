@@ -109,8 +109,6 @@ public class MainController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
                 stage.setScene(new Scene(detailPage));
             }
 

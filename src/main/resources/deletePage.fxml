@@ -7,15 +7,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="781.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DeletePageController">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="781.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DeletePageController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button fx:id="acceptbutton" layoutX="330.0" layoutY="346.0" mnemonicParsing="false" onAction="#accept" prefHeight="60.0" prefWidth="145.0" text="Accept">
+      <Button fx:id="acceptbutton" layoutX="22.0" layoutY="97.0" mnemonicParsing="false" onAction="#accept" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bestätigen">
          <font>
-            <Font name="System Bold" size="13.0" />
-         </font></Button>
-      <Button fx:id="cancelnbutton" layoutX="363.0" layoutY="444.0" mnemonicParsing="false" onAction="#cancel" prefHeight="37.0" prefWidth="79.0" text="Cancel" />
-      <Text fx:id="booktitle" layoutX="41.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="722.13671875">
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="booktitle" layoutX="29.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="722.13671875">
          <font>
             <Font size="20.0" />
          </font></Text>
@@ -24,5 +24,10 @@
             <Image url="@../../../../../Desktop/Giraffe.png" />
          </image>
       </ImageView>
+      <Button fx:id="cancelbutton" layoutX="164.0" layoutY="97.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Abbrechen">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
