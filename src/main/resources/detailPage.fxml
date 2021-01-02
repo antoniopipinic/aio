@@ -30,7 +30,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Text fx:id="schlagwortText1" layoutX="165.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Informationen" wrappingWidth="286.0">
+      <Text fx:id="titleText" layoutX="165.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Informationen" wrappingWidth="286.0">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

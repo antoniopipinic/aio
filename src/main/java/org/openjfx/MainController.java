@@ -1,5 +1,6 @@
 package org.openjfx;
 
+import helper.Book;
 import helper.Data;
 import helper.DatenbankMG;
 import javafx.collections.FXCollections;
@@ -12,9 +13,9 @@ import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -22,11 +23,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainController {
-    ObservableList<String> names = FXCollections.observableArrayList();
+
+    ObservableList<Book> books = FXCollections.<Book>observableArrayList();
+
     @FXML
-    private ListView<String> bookListView = new ListView<String>();
+    private TableView tableView = new TableView();
     @FXML
     private Button addButton;
     @FXML
@@ -40,16 +45,36 @@ public class MainController {
     @FXML
     private Button searchButton;
 
+
     @FXML
     protected void initialize() {
+        TableColumn<Book, String> titleColumn = new TableColumn<>("Titel");
+
+
+        TableColumn autorColumn = new TableColumn<>("Autor");
+
+
+        TableColumn genreColumn = new TableColumn<>("Genre");
+
+
+        TableColumn isbnColumn = new TableColumn<>("ISBN");
+
+
+        tableView.getColumns().addAll(titleColumn, autorColumn, genreColumn, isbnColumn);
+        titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+        autorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
+        isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
+        genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
         warningText.setVisible(false);
         String sqlString = "SELECT * FROM books";
+
         //Getting all Books from DB
         try {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while (queryResult.next()) {
-                names.add(queryResult.getString(2));//
+                Book book = new Book(queryResult.getString(2), queryResult.getString(3), queryResult.getString(4), queryResult.getString(5));
+                books.add(book);
             }
 
         } catch (Exception e) {
@@ -57,17 +82,18 @@ public class MainController {
             e.getCause();
         }
         //Showing all books
-        bookListView.setItems(names);
+        tableView.getItems().addAll(books);
         //Show Setailpage when clicking on a book
-        bookListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        tableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
             @Override
             public void handle(MouseEvent click) {
 
                 if (click.getClickCount() == 2) {
-                    Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
+                    System.out.println(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
+                    Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
 
-                    Stage stage = (Stage) bookListView.getScene().getWindow();
+                    Stage stage = (Stage) tableView.getScene().getWindow();
                     Parent detailPage = null;
                     try {
                         detailPage = FXMLLoader.load(getClass().getResource("/detailPage.fxml"));
@@ -100,26 +126,29 @@ public class MainController {
     private final EventHandler<ActionEvent> searchButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            //passing selected book to the editpage
-            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
-            Stage stage = (Stage) bookListView.getScene().getWindow();
+
+
+            Stage stage = (Stage) tableView.getScene().getWindow();
             Parent detailPage = null;
             try {
                 detailPage = FXMLLoader.load(getClass().getResource("/searchPage.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
-                stage.setScene(new Scene(detailPage));
-            }
+            stage.setScene(new Scene(detailPage));
+        }
 
 
     };
     private final EventHandler<ActionEvent> editButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            //passing selected book to the editpage
-            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
-            Stage stage = (Stage) bookListView.getScene().getWindow();
+            if (tableView.getSelectionModel().getSelectedItem() != null) {
+                //passing selected book to the editpage
+                Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
+            }
+
+            Stage stage = (Stage) tableView.getScene().getWindow();
             Parent detailPage = null;
             try {
                 detailPage = FXMLLoader.load(getClass().getResource("/editPage.fxml"));
@@ -128,10 +157,10 @@ public class MainController {
             }
 
             //warning when there is no book selected
-            if (bookListView.getSelectionModel().getSelectedItem() == null){
+            if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
-            }
-            else {
+            } else {
+
                 stage.setScene(new Scene(detailPage));
             }
 
@@ -140,7 +169,7 @@ public class MainController {
     private final EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) bookListView.getScene().getWindow();
+            Stage stage = (Stage) tableView.getScene().getWindow();
             Parent detailPage = null;
             try {
                 detailPage = FXMLLoader.load(getClass().getResource("/addPage.fxml"));
@@ -153,9 +182,11 @@ public class MainController {
     private final EventHandler<ActionEvent> deleteButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            //passing selected book to the deletepage
-            Data.setDataString(bookListView.getSelectionModel().getSelectedItem());
-            Stage stage = (Stage) bookListView.getScene().getWindow();
+            if (tableView.getSelectionModel().getSelectedItem() != null) {
+                //passing selected book to the editpage
+                Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
+            }
+            Stage stage = (Stage) tableView.getScene().getWindow();
             Parent detailPage = null;
             try {
                 detailPage = FXMLLoader.load(getClass().getResource("/deletePage.fxml"));
@@ -165,10 +196,9 @@ public class MainController {
 
 
             //warning when there is no book selected
-            if (bookListView.getSelectionModel().getSelectedItem() == null){
+            if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
-            }
-            else {
+            } else {
                 stage.setScene(new Scene(detailPage));
             }
 
