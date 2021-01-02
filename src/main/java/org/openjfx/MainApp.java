@@ -30,7 +30,6 @@ public class MainApp extends Application {
         //Set so window can be moved across screen
         WindowMover.loadResource(root);
         WindowMover.loadStage(primaryStage);
-
     }
 
 }

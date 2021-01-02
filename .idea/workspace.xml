@@ -30,21 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="File Push">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/searchPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/searchPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,12 +75,6 @@
                 <item name="aio" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="aio" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -144,15 +131,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,6 +204,8 @@
       <workItem from="1609330656953" duration="4763000" />
       <workItem from="1609336659304" duration="678000" />
       <workItem from="1609361491345" duration="15319000" />
+      <workItem from="1609385890060" duration="8000" />
+      <workItem from="1609589005601" duration="7362000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>

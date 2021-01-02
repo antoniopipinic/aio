@@ -15,22 +15,22 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Text layoutX="-93.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" textAlignment="CENTER" wrappingWidth="573.36328125">
+      <Text layoutX="-101.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" textAlignment="CENTER" wrappingWidth="573.36328125">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="-93.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" textAlignment="CENTER" wrappingWidth="573.36328125">
+      <Text layoutX="-101.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" textAlignment="CENTER" wrappingWidth="573.36328125">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="-93.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" textAlignment="CENTER" wrappingWidth="573.36328125">
+      <Text layoutX="-101.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" textAlignment="CENTER" wrappingWidth="573.36328125">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Text fx:id="schlagwortText1" layoutX="165.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Informationen" wrappingWidth="286.0">
+      <Text fx:id="titleText" layoutX="165.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Informationen" wrappingWidth="286.0">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

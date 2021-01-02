@@ -1,8 +1,8 @@
 package org.openjfx;
 
+import helper.Data;
 import helper.DatenbankMG;
 import helper.WindowMover;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -12,12 +12,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -37,7 +35,6 @@ public class LoginPageController {
     @FXML
     private PasswordField passwordField;
 
-
     public void loginButtonOnAction(ActionEvent event) {
         if (!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()) {
             validLogin();
@@ -50,6 +47,7 @@ public class LoginPageController {
     private void validLogin() {
 
         String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordField.getText() + "'";
+        Data.setUsername(usernameTextField.getText());
         try {
             //Database management for login
             ResultSet queryResult = DatenbankMG.performQuery(verifyLogin);
