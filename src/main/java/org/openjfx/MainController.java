@@ -71,7 +71,7 @@ public class MainController {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while (queryResult.next()) {
-                Book book = new Book(queryResult.getString(2), queryResult.getString(3), queryResult.getString(4), queryResult.getString(5));
+                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4));
                 books.add(book);
             }
 
