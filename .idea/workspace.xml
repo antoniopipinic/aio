@@ -30,11 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="File Push">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,15 +131,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,7 +158,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -176,7 +179,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -199,6 +204,8 @@
       <workItem from="1609330656953" duration="4763000" />
       <workItem from="1609336659304" duration="678000" />
       <workItem from="1609361491345" duration="15319000" />
+      <workItem from="1609385890060" duration="8000" />
+      <workItem from="1609589005601" duration="7362000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -318,31 +325,5 @@
     <MESSAGE value="AIO-25: visual improvements" />
     <MESSAGE value="AIO-25: improvements" />
     <option name="LAST_COMMIT_MESSAGE" value="AIO-25: improvements" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1609597484708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609597484708" />
-    <state width="1493" height="136" key="GridCell.Tab.0.bottom" timestamp="1609600175581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609600175581" />
-    <state width="1493" height="136" key="GridCell.Tab.0.center" timestamp="1609600175581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609600175581" />
-    <state width="1493" height="136" key="GridCell.Tab.0.left" timestamp="1609600175580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609600175580" />
-    <state width="1493" height="136" key="GridCell.Tab.0.right" timestamp="1609600175581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609600175581" />
-    <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1609595630207">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1609595630207" />
   </component>
 </project>

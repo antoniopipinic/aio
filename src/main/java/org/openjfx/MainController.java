@@ -45,7 +45,6 @@ public class MainController {
     @FXML
     private Button searchButton;
 
-
     @FXML
     protected void initialize() {
         TableColumn<Book, String> titleColumn = new TableColumn<>("Titel");
@@ -66,8 +65,7 @@ public class MainController {
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
         warningText.setVisible(false);
-        String sqlString = "SELECT * FROM books";
-
+        String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '"+Data.getUsername()+"'";
         //Getting all Books from DB
         try {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
