@@ -32,7 +32,6 @@ public class AddPageController {
     private Button cancelButton;
     @FXML
     private Text errorText;
-
     @FXML
     protected void initialize() {
         addButton.setOnAction(addButtonEvent);

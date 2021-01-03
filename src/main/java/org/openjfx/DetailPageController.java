@@ -50,8 +50,6 @@ public class DetailPageController {
             e.printStackTrace();
             e.getCause();
         }
-
-
         titleText.setText(Data.getDataString());
         //Closing DB connection
 

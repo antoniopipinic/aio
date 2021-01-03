@@ -1,5 +1,6 @@
 package org.openjfx;
 
+import com.mysql.jdbc.log.Log;
 import helper.DatenbankMG;
 import helper.WindowMover;
 import javafx.application.*;
@@ -12,9 +13,11 @@ import javafx.stage.*;
 
 public class MainApp extends Application {
 
+
     public static void main(String[] args) {
         launch(args);
     }
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
