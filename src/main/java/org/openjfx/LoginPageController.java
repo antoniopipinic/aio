@@ -43,7 +43,6 @@ public class LoginPageController {
         }
 
     }
-
     private void validLogin() {
 
         String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordField.getText() + "'";
@@ -78,9 +77,7 @@ public class LoginPageController {
             e.printStackTrace();
             e.getCause();
         }
-
     }
-
     public void cancelButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
