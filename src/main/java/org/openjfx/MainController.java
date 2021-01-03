@@ -115,6 +115,7 @@ public class MainController {
 
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
+        //LogOut Stage when clicking on logout img
         logOutIMG.setOnMouseClicked(logOutClickedEvent);
 
 

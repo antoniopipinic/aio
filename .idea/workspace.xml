@@ -29,7 +29,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="File Push">
+    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
     </list>
@@ -97,6 +97,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1jpwyofzAQBy8FE8XdPMdHeHLr2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -125,13 +128,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,7 +157,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -171,13 +178,13 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.aio [run]" />
-        <item itemvalue="Gradle.aio [build]" />
         <item itemvalue="Gradle.aio [run]" />
         <item itemvalue="Gradle.aio [build]" />
       </list>
@@ -198,6 +205,7 @@
       <workItem from="1609361491345" duration="15319000" />
       <workItem from="1609385890060" duration="8000" />
       <workItem from="1609589005601" duration="7362000" />
+      <workItem from="1609664455317" duration="7851000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -276,7 +284,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609334347580</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="AIO-32: Fixed tab order">
+      <created>1609664988175</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609664988175</updated>
+    </task>
+    <task id="LOCAL-00013" summary="AIO-21: Implement logout function">
+      <created>1609673781073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609673781073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,24 +338,8 @@
     <MESSAGE value="Implement DeletePageController Class &amp; FXML File deletePage" />
     <MESSAGE value="AIO-25: visual improvements" />
     <MESSAGE value="AIO-25: improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-25: improvements" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1493" height="136" key="GridCell.Tab.0.bottom" timestamp="1609600996812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609600996812" />
-    <state width="1493" height="136" key="GridCell.Tab.0.center" timestamp="1609600996812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609600996812" />
-    <state width="1493" height="136" key="GridCell.Tab.0.left" timestamp="1609600996811">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609600996811" />
-    <state width="1493" height="136" key="GridCell.Tab.0.right" timestamp="1609600996812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="136" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609600996812" />
+    <MESSAGE value="AIO-32: Fixed tab order" />
+    <MESSAGE value="AIO-21: Implement logout function" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-21: Implement logout function" />
   </component>
 </project>
