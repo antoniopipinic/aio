@@ -62,14 +62,8 @@ public class DetailPageController {
     EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
         public void handle(ActionEvent event) {
 
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Parent mainWindow = null;
-            try {
-                mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(mainWindow));
+            MainApp.easyScene.loadResource("/main.fxml");
+            MainApp.easyScene.showScene();
         }
     };
 }

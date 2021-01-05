@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="287.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.RegisterPageController">
+<AnchorPane prefHeight="287.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.RegisterPageController">
    <children>
       <TextField fx:id="emailTextField" layoutX="183.0" layoutY="70.0" prefHeight="25.0" prefWidth="306.0" />
       <PasswordField fx:id="passwordTextField1" layoutX="183.0" layoutY="110.0" prefHeight="31.0" prefWidth="306.0" promptText="Password" />

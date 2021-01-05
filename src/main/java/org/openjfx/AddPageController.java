@@ -52,14 +52,8 @@ public class AddPageController {
 
 
                 //Go back to main Page
-                Stage stage = (Stage) cancelButton.getScene().getWindow();
-                Parent mainWindow = null;
-                try {
-                    mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                stage.setScene(new Scene(mainWindow));
+                MainApp.easyScene.loadResource("/main.fxml");
+                MainApp.easyScene.showScene();
 
             }
         }
@@ -69,14 +63,8 @@ public class AddPageController {
 
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) cancelButton.getScene().getWindow();
-            Parent mainWindow = null;
-            try {
-                mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(mainWindow));
+            MainApp.easyScene.loadResource("/main.fxml");
+            MainApp.easyScene.showScene();
         }
 
     };

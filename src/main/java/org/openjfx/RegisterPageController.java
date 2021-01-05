@@ -60,14 +60,8 @@ public class RegisterPageController {
 
 
                 //Go back to main Page
-                Stage stage = (Stage) registerCancelButton.getScene().getWindow();
-                Parent mainWindow = null;
-                try {
-                    mainWindow = FXMLLoader.load(getClass().getResource("/login.fxml"));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                stage.setScene(new Scene(mainWindow));
+                MainApp.easyScene.loadResource("/main.fxml");
+                MainApp.easyScene.showScene();
 
             }
         }
@@ -78,14 +72,8 @@ public class RegisterPageController {
 
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) registerCancelButton.getScene().getWindow();
-            Parent mainWindow = null;
-            try {
-                mainWindow = FXMLLoader.load(getClass().getResource("/login.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(mainWindow));
+            MainApp.easyScene.loadResource("/login.fxml");
+            MainApp.easyScene.showScene();
         }
 
     };

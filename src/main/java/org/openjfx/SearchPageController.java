@@ -1,6 +1,5 @@
 package org.openjfx;
 
-import helper.WindowMover;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,17 +33,9 @@ public class SearchPageController {
 
     @FXML
     private void cancel() {
-        Stage stage = (Stage) keywordText.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
-        Parent mainWindow = null;
-        try {
-            mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage.setScene(new Scene(mainWindow));
+        MainApp.easyScene.loadResource("/main.fxml");
+        MainApp.easyScene.showScene();
 
-        WindowMover.loadResource(mainWindow);
-        WindowMover.loadStage(stage);
     }
 
     public void search(ActionEvent event) {

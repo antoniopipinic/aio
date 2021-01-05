@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="401.0" prefWidth="866.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.AddPageController">
+<AnchorPane prefHeight="459.0" prefWidth="816.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.AddPageController">
    <children>
       <Text layoutX="91.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel">
          <font>
@@ -33,20 +35,30 @@
       </Text>
       <TextField fx:id="isbnTextField" layoutX="187.0" layoutY="284.0" prefHeight="31.0" prefWidth="523.0" style="-fx-background-radius: 30;" />
       <Text fx:id="errorText" fill="RED" layoutX="356.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte füllen Sie alle Felder aus" visible="false" />
-      <Button fx:id="addButton" layoutX="221.0" layoutY="350.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Buch hinzufügen">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="cancelButton" layoutX="433.0" layoutY="350.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Abbrechen">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
-      <Text fx:id="schlagwortText1" layoutX="194.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Hinzufügen" wrappingWidth="286.0">
+      <Text fx:id="schlagwortText1" layoutX="257.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Hinzufügen" textAlignment="CENTER" wrappingWidth="286.0">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
+      <HBox alignment="CENTER" layoutX="187.0" layoutY="363.0" prefHeight="66.0" prefWidth="523.0">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Abbrechen">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="addButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="183.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Buch hinzufügen">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

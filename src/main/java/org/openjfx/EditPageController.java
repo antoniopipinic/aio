@@ -2,7 +2,6 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
-import helper.WindowMover;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,14 +36,8 @@ public class EditPageController {
 
 
             //Go back to main Page
-            Stage stage = (Stage) titleTextField.getScene().getWindow();
-            Parent mainWindow = null;
-            try {
-                mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(mainWindow));
+            MainApp.easyScene.loadResource("/main.fxml");
+            MainApp.easyScene.showScene();
 
         }
     }
@@ -81,7 +74,7 @@ public class EditPageController {
         }
         stage.setScene(new Scene(mainWindow));
 
-        WindowMover.loadResource(mainWindow);
-        WindowMover.loadStage(stage);
+        //WindowMover.loadResource(mainWindow);
+        //WindowMover.loadStage(stage);
     }
 }

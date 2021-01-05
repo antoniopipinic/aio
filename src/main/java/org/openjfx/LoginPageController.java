@@ -2,7 +2,6 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
-import helper.WindowMover;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -54,20 +53,9 @@ public class LoginPageController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("You're logged in successfully.");
-
-                    //After Login going to main Page
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    //Center Stage on screen - width 866 height 606 manually added
-                    Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
-                    stage.setX((screenBounds.getWidth() - 866) / 2);
-                    stage.setY((screenBounds.getHeight() - 606) / 2);
-                    Parent mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-                    Scene scene = new Scene(mainWindow);
-                    scene.setFill(Color.TRANSPARENT);
-                    stage.setScene(scene);
-
-                    WindowMover.loadResource(mainWindow);
-                    WindowMover.loadStage(stage);
+                    //Go to main Page
+                    MainApp.easyScene.loadResource("/main.fxml");
+                    MainApp.easyScene.showScene();
                 } else {
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
@@ -84,13 +72,7 @@ public class LoginPageController {
     }
 
     public void registerButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) registerButton.getScene().getWindow();
-        Parent registerPage = null;
-        try {
-            registerPage = FXMLLoader.load(getClass().getResource("/registerPage.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage.setScene(new Scene(registerPage));
+        MainApp.easyScene.loadResource("/registerPage.fxml");
+        MainApp.easyScene.showScene();
     }
 }

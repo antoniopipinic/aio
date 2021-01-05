@@ -91,18 +91,11 @@ public class MainController {
             public void handle(MouseEvent click) {
 
                 if (click.getClickCount() == 2) {
-                    System.out.println(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
+                    //Save book title for the next Page
                     Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
 
-                    Stage stage = (Stage) tableView.getScene().getWindow();
-                    Parent detailPage = null;
-                    try {
-                        detailPage = FXMLLoader.load(getClass().getResource("/detailPage.fxml"));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    stage.setScene(new Scene(detailPage));
+                    MainApp.easyScene.loadResource("/detailPage.fxml");
+                    MainApp.easyScene.showScene();
                 }
             }
         });
@@ -124,14 +117,8 @@ public class MainController {
         @Override
         public void handle(Event event) {
             //Event that closes the stage
-            Stage stage = (Stage) addButton.getScene().getWindow();
-            Parent detailPage = null;
-            try {
-                detailPage = FXMLLoader.load(getClass().getResource("/login.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(detailPage));
+            MainApp.easyScene.loadResource("/login.fxml");
+            MainApp.easyScene.showScene();
         }
     };
     private final EventHandler offClickedEvent = new EventHandler() {
@@ -169,19 +156,12 @@ public class MainController {
                 Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
             }
 
-            Stage stage = (Stage) tableView.getScene().getWindow();
-            Parent detailPage = null;
-            try {
-                detailPage = FXMLLoader.load(getClass().getResource("/editPage.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
             //warning when there is no book selected
             if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
             } else {
-
-                stage.setScene(new Scene(detailPage));
+                MainApp.easyScene.loadResource("/editPage.fxml");
+                MainApp.easyScene.showScene();
             }
 
         }
@@ -189,14 +169,8 @@ public class MainController {
     private final EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) tableView.getScene().getWindow();
-            Parent detailPage = null;
-            try {
-                detailPage = FXMLLoader.load(getClass().getResource("/addPage.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(detailPage));
+            MainApp.easyScene.loadResource("/addPage.fxml");
+            MainApp.easyScene.showScene();
         }
     };
     private final EventHandler<ActionEvent> deleteButtonEvent = new EventHandler<ActionEvent>() {
@@ -206,18 +180,13 @@ public class MainController {
                 //passing selected book to the editpage
                 Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
             }
-            Stage stage = (Stage) tableView.getScene().getWindow();
-            Parent detailPage = null;
-            try {
-                detailPage = FXMLLoader.load(getClass().getResource("/deletePage.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
             //warning when there is no book selected
             if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
             } else {
-                stage.setScene(new Scene(detailPage));
+                MainApp.easyScene.loadResource("/deletePage.fxml");
+                MainApp.easyScene.showScene();
             }
 
         }
