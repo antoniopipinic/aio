@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,7 +22,7 @@
                         <Image url="@../../../Images/Giraffe.png" />
                     </image>
                 </ImageView>
-            <ImageView fx:id="offIMG" fitHeight="32.0" fitWidth="21.0" layoutX="829.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="offIMG" accessibleRole="BUTTON" fitHeight="32.0" fitWidth="21.0" layoutX="829.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Images/power-off.png" />
                </image>
@@ -37,33 +38,55 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="deleteButton" layoutX="79.0" layoutY="287.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Löschen">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="editButton" layoutX="79.0" layoutY="333.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bearbeiten">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="searchButton" layoutX="79.0" layoutY="380.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Suchen">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Text fx:id="titleText" layoutX="266.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Liste" wrappingWidth="286.0">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Text>
-            <TableView fx:id="tableView" layoutX="266.0" layoutY="114.0" prefHeight="438.0" prefWidth="530.0" />
+            <TableView fx:id="tableView" layoutX="266.0" layoutY="114.0" prefHeight="438.0" prefWidth="530.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TableView>
             <ImageView fx:id="logOutIMG" accessibleRole="BUTTON" blendMode="COLOR_BURN" cache="true" depthTest="DISABLE" fitHeight="32.0" fitWidth="21.0" layoutX="796.0" layoutY="15.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" smooth="false">
                <image>
                   <Image url="@../../../Images/logout.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
+            <TextField fx:id="fastSearchButton" layoutX="266.0" layoutY="89.0" prefHeight="25.0" prefWidth="195.0" promptText="Sucher">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TextField>
             </children></AnchorPane>
     </items>
 </SplitPane>
