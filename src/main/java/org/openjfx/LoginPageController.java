@@ -95,12 +95,6 @@ public class LoginPageController {
 
 
 
-    /*public void offButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) offIMG.getScene().getWindow();
-        stage.close();
-    }*/
-
-
 
     }
 

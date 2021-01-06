@@ -31,22 +31,14 @@
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/EasyScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/EasyScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/WindowMover.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/SearchPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/SearchPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/deletePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/detailPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,6 +125,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -144,15 +137,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.aio [run]">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,7 +164,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -192,7 +185,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -217,6 +212,8 @@
       <workItem from="1609361491345" duration="15319000" />
       <workItem from="1609385890060" duration="8000" />
       <workItem from="1609589005601" duration="7362000" />
+      <workItem from="1609664433719" duration="6747000" />
+      <workItem from="1609674396745" duration="849000" />
       <workItem from="1609664455317" duration="8244000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
@@ -317,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609675249918</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="AIO-33: added Beenden Button am LogIn Screen">
+      <created>1609955865806</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609955865806</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,32 +363,7 @@
     <MESSAGE value="AIO-25: improvements" />
     <MESSAGE value="AIO-32: Fixed tab order" />
     <MESSAGE value="AIO-21: Implement logout function" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-21: Implement logout function" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1609757182051">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609757182051" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609761248664">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609761248664" />
-    <state width="1493" height="160" key="GridCell.Tab.0.bottom" timestamp="1609840012092">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609840012092" />
-    <state width="1493" height="160" key="GridCell.Tab.0.center" timestamp="1609840012092">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609840012092" />
-    <state width="1493" height="160" key="GridCell.Tab.0.left" timestamp="1609840012092">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609840012092" />
-    <state width="1493" height="160" key="GridCell.Tab.0.right" timestamp="1609840012092">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609840012092" />
+    <MESSAGE value="AIO-33: added Beenden Button am LogIn Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-33: added Beenden Button am LogIn Screen" />
   </component>
 </project>
