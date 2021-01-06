@@ -2,6 +2,8 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -11,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -33,6 +37,10 @@ public class LoginPageController {
     private TextField usernameTextField;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private Button addButton;
+    @FXML
+    private ImageView offIMG;
 
     public void loginButtonOnAction(ActionEvent event) {
         if (!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()) {
@@ -42,7 +50,10 @@ public class LoginPageController {
         }
 
     }
+
+
     private void validLogin() {
+
 
         String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordField.getText() + "'";
         Data.setUsername(usernameTextField.getText());
@@ -65,6 +76,7 @@ public class LoginPageController {
             e.printStackTrace();
             e.getCause();
         }
+
     }
     public void cancelButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
@@ -75,4 +87,20 @@ public class LoginPageController {
         MainApp.easyScene.loadResource("/registerPage.fxml");
         MainApp.easyScene.showScene();
     }
-}
+
+    public void offClickedEvent(MouseEvent mouseEvent) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
+    }
+
+
+
+    /*public void offButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) offIMG.getScene().getWindow();
+        stage.close();
+    }*/
+
+
+
+    }
+

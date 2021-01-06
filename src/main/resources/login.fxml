@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -47,6 +49,17 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
+            <ImageView fx:id="offIMG" fitHeight="32.0" fitWidth="21.0" layoutX="339.0" layoutY="14.0" onMouseClicked="#offClickedEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/power-off.png" />
+               </image>
+               <effect>
+                  <Bloom />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="392.0" prefWidth="234.0" style="-fx-background-color: linear-gradient(to right top, #add8e6, #8fdad2, #96d6a7, #bec976, #f1b25f); -fx-background-radius: 15;">
