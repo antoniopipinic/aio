@@ -31,17 +31,9 @@
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/EasyScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/EasyScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DeletePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DetailPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/SearchPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/SearchPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/searchPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/searchPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

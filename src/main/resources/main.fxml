@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="866.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.MainController">
     <items>
@@ -66,7 +60,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fx:id="titleText" layoutX="266.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch Liste" wrappingWidth="286.0">
+            <Text fx:id="titleText" layoutX="266.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
