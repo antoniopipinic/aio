@@ -20,9 +20,7 @@ public class MainApp extends Application {
 
 
         easyScene.loadPrimaryStage(primaryStage);
-        easyScene.loadResource("/login.fxml");
-        easyScene.showScene();
-        // primaryStage.show();
+        easyScene.showScene("/login.fxml");
     }
 
 }

@@ -14,7 +14,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.MapValueFactory;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -23,8 +22,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.ResultSet;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainController {
 
@@ -94,8 +91,7 @@ public class MainController {
                     //Save book title for the next Page
                     Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
 
-                    MainApp.easyScene.loadResource("/detailPage.fxml");
-                    MainApp.easyScene.showScene();
+                    MainApp.easyScene.showScene("/detailPage.fxml");
                 }
             }
         });
@@ -116,17 +112,14 @@ public class MainController {
     private final EventHandler logOutClickedEvent = new EventHandler() {
         @Override
         public void handle(Event event) {
-            //Event that closes the stage
-            MainApp.easyScene.loadResource("/login.fxml");
-            MainApp.easyScene.showScene();
+            MainApp.easyScene.showScene("/login.fxml");
         }
     };
     private final EventHandler offClickedEvent = new EventHandler() {
         @Override
         public void handle(Event event) {
             //Event that closes the stage
-            Stage stage = (Stage) addButton.getScene().getWindow();
-            stage.close();
+           MainApp.easyScene.off();
         }
     };
 
@@ -134,16 +127,7 @@ public class MainController {
     private final EventHandler<ActionEvent> searchButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-
-
-            Stage stage = (Stage) tableView.getScene().getWindow();
-            Parent detailPage = null;
-            try {
-                detailPage = FXMLLoader.load(getClass().getResource("/searchPage.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(detailPage));
+            MainApp.easyScene.showScene("/searchPage.fxml");
         }
 
 
@@ -160,8 +144,7 @@ public class MainController {
             if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
             } else {
-                MainApp.easyScene.loadResource("/editPage.fxml");
-                MainApp.easyScene.showScene();
+                MainApp.easyScene.showScene("/editPage.fxml");
             }
 
         }
@@ -169,8 +152,7 @@ public class MainController {
     private final EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            MainApp.easyScene.loadResource("/addPage.fxml");
-            MainApp.easyScene.showScene();
+            MainApp.easyScene.showScene("/addPage.fxml");
         }
     };
     private final EventHandler<ActionEvent> deleteButtonEvent = new EventHandler<ActionEvent>() {
@@ -185,8 +167,7 @@ public class MainController {
             if (tableView.getSelectionModel().getSelectedItem() == null) {
                 warningText.setVisible(true);
             } else {
-                MainApp.easyScene.loadResource("/deletePage.fxml");
-                MainApp.easyScene.showScene();
+                MainApp.easyScene.showScene("/deletePage.fxml");
             }
 
         }

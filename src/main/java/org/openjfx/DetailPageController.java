@@ -5,14 +5,9 @@ import helper.DatenbankMG;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 
 public class DetailPageController {
@@ -62,8 +57,7 @@ public class DetailPageController {
     EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
         public void handle(ActionEvent event) {
 
-            MainApp.easyScene.loadResource("/main.fxml");
-            MainApp.easyScene.showScene();
+            MainApp.easyScene.showScene("/main.fxml");
         }
     };
 }

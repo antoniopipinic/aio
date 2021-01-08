@@ -2,25 +2,16 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 
 public class LoginPageController {
@@ -65,8 +56,7 @@ public class LoginPageController {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("You're logged in successfully.");
                     //Go to main Page
-                    MainApp.easyScene.loadResource("/main.fxml");
-                    MainApp.easyScene.showScene();
+                    MainApp.easyScene.showScene("/main.fxml");
                 } else {
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
@@ -79,18 +69,17 @@ public class LoginPageController {
 
     }
     public void cancelButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        //close Stage
+        MainApp.easyScene.off();
     }
 
     public void registerButtonOnAction(ActionEvent event) {
-        MainApp.easyScene.loadResource("/registerPage.fxml");
-        MainApp.easyScene.showScene();
+        MainApp.easyScene.showScene("/registerPage.fxml");
     }
 
     public void offClickedEvent(MouseEvent mouseEvent) {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        //close Stage
+        MainApp.easyScene.off();
     }
 
 

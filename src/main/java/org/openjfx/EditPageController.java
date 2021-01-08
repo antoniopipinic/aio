@@ -3,15 +3,9 @@ package org.openjfx;
 import helper.Data;
 import helper.DatenbankMG;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.sql.ResultSet;
 
 public class EditPageController {
@@ -36,8 +30,7 @@ public class EditPageController {
 
 
             //Go back to main Page
-            MainApp.easyScene.loadResource("/main.fxml");
-            MainApp.easyScene.showScene();
+            MainApp.easyScene.showScene("/main.fxml");
 
         }
     }
@@ -65,16 +58,7 @@ public class EditPageController {
 
     @FXML
     private void cancel(){
-        Stage stage = (Stage) titleTextField.getScene().getWindow(); //aktuelle Bühne (hier titelaktuell...könnte auch autorneu etc sein)
-        Parent mainWindow = null;
-        try {
-            mainWindow = FXMLLoader.load(getClass().getResource("/main.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        stage.setScene(new Scene(mainWindow));
-
-        //WindowMover.loadResource(mainWindow);
-        //WindowMover.loadStage(stage);
+        //Go back to main Page
+        MainApp.easyScene.showScene("/main.fxml");
     }
 }

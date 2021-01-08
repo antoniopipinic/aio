@@ -4,14 +4,8 @@ import helper.Data;
 import helper.DatenbankMG;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class DeletePageController {
     @FXML
@@ -30,8 +24,7 @@ public class DeletePageController {
     }
     @FXML
     private void cancel(){
-        MainApp.easyScene.loadResource("/main.fxml");
-        MainApp.easyScene.showScene();
+        MainApp.easyScene.showScene("/main.fxml");
     }
 
     public void accept(ActionEvent event) {
@@ -39,7 +32,6 @@ public class DeletePageController {
         String sql = "DELETE FROM books WHERE title='" + Data.getDataString() + "';";
         DatenbankMG.performUpdate(sql);
 
-        MainApp.easyScene.loadResource("/main.fxml");
-        MainApp.easyScene.showScene();
+        MainApp.easyScene.showScene("/main.fxml");
     }
 }
