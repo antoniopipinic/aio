@@ -2,6 +2,7 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
+import helper.components.WarningLabel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -19,11 +20,11 @@ public class EditPageController {
     @FXML
     private TextField ISBNTextField;
     @FXML
-    private Label errorText;
+    private WarningLabel errorLabel;
     @FXML
     private void save(){
         if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
-            errorText.setVisible(true);
+            errorLabel.showError();
         } else {
             String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"'WHERE title='"+Data.getDataString()+ "';";
             DatenbankMG.performUpdate(SQLfetch);
@@ -36,7 +37,8 @@ public class EditPageController {
     }
 
     @FXML
-    protected void initialize() {           //initialize Methode wird immer aufgerufen wenn neue Scene aufgemacht wird
+    protected void initialize() {
+        //initialize Methode wird immer aufgerufen wenn neue Scene aufgemacht wird
         String sqlString = "SELECT * FROM books WHERE title='"+Data.getDataString()+"';";
         //Getting all Books from DB
         try {

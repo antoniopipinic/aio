@@ -18,7 +18,6 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         DatenbankMG.connectToDB();
 
-
         easyScene.loadPrimaryStage(primaryStage);
         easyScene.showScene("/login.fxml");
     }

@@ -1,6 +1,7 @@
 package org.openjfx;
 
 import helper.DatenbankMG;
+import helper.components.WarningLabel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,9 +26,7 @@ public class RegisterPageController {
     @FXML
     private Button registerCancelButton;
     @FXML
-    private Text errorRegisterText;
-    @FXML
-    private Text successfulRegisterText;
+    private WarningLabel warningLabel;
 
     @FXML
     protected void initialize() {
@@ -41,14 +40,13 @@ public class RegisterPageController {
         public void handle(ActionEvent event) {
 
             if (emailTextField.getText().isBlank() || passwordTextField1.getText().isBlank() || passwordTextField2.getText().isBlank() || fullnameTextField.getText().isBlank()) {
-                errorRegisterText.setVisible(true);
-                errorRegisterText.setText("Bitte alle Felder ausf\u00fcllen!");
-            }
-            else if(passwordTextField1.getText().equals(passwordTextField2.getText())){
-                errorRegisterText.setVisible(true);
-                errorRegisterText.setText("Die Passwörter müssen übereinstimmen!");
+                warningLabel.setText("Bitte alle Felder ausf\u00fcllen!");
+                warningLabel.showError();
+            } else if (passwordTextField1.getText().equals(passwordTextField2.getText())) {
+                warningLabel.setText("Die Passwörter müssen übereinstimmen!");
+                warningLabel.showError();
 
-                String SQLfetch = "INSERT INTO users (email,password,fullname) VALUES ('" + emailTextField.getText() + "','" + passwordTextField1.getText() + "','" + fullnameTextField.getText()  + "')";
+                String SQLfetch = "INSERT INTO users (email,password,fullname) VALUES ('" + emailTextField.getText() + "','" + passwordTextField1.getText() + "','" + fullnameTextField.getText() + "')";
 
                 DatenbankMG.performUpdate(SQLfetch);
 

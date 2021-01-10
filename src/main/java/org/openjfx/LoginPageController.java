@@ -2,7 +2,9 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
+import helper.components.WarningLabel;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -12,32 +14,24 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 
 public class LoginPageController {
 
-    @FXML // FXML - Bezeichung für graphischen Output, @FXML definiert das diese Objekt im entsprechende fxml File ist
-    private Button cancelButton;
     @FXML
-    private Button loginButton;
-    @FXML
-    private Button registerButton;
-    @FXML
-    private Label loginMessageLabel;
+    private WarningLabel loginMessageLabel;
     @FXML
     private TextField usernameTextField;
     @FXML
     private PasswordField passwordField;
-    @FXML
-    private Button addButton;
-    @FXML
-    private ImageView offIMG;
 
     public void loginButtonOnAction(ActionEvent event) {
         if (!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()) {
             validLogin();
         } else {
-            loginMessageLabel.setText("Please enter username and password!");
+            loginMessageLabel.setText("Bitte Benutzername und Passwort eingeben!");
+            loginMessageLabel.showError();
         }
 
     }
@@ -54,11 +48,12 @@ public class LoginPageController {
 
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
-                    loginMessageLabel.setText("You're logged in successfully.");
+
                     //Go to main Page
                     MainApp.easyScene.showScene("/main.fxml");
                 } else {
-                    loginMessageLabel.setText("Invalid login. Please try again.");
+                    loginMessageLabel.setText("Falsche Benutzerdaten. Bitte erneut versuchen.");
+                    loginMessageLabel.showError();
                 }
             }
 

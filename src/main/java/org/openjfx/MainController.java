@@ -3,6 +3,7 @@ package org.openjfx;
 import helper.Book;
 import helper.Data;
 import helper.DatenbankMG;
+import helper.components.WarningLabel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,7 +39,7 @@ public class MainController {
     @FXML
     private Button deleteButton;
     @FXML
-    private Label warningText;
+    private WarningLabel warningLabel;
     @FXML
     private Button searchButton;
     @FXML
@@ -64,8 +65,8 @@ public class MainController {
         autorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        warningText.setVisible(false);
-        String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '"+Data.getUsername()+"'";
+
+        String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
         //Getting all Books from DB
         try {
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
@@ -109,6 +110,7 @@ public class MainController {
 
 
     }
+
     private final EventHandler logOutClickedEvent = new EventHandler() {
         @Override
         public void handle(Event event) {
@@ -119,7 +121,7 @@ public class MainController {
         @Override
         public void handle(Event event) {
             //Event that closes the stage
-           MainApp.easyScene.off();
+            MainApp.easyScene.off();
         }
     };
 
@@ -142,7 +144,7 @@ public class MainController {
 
             //warning when there is no book selected
             if (tableView.getSelectionModel().getSelectedItem() == null) {
-                warningText.setVisible(true);
+                warningLabel.showError();
             } else {
                 MainApp.easyScene.showScene("/editPage.fxml");
             }
@@ -165,7 +167,7 @@ public class MainController {
 
             //warning when there is no book selected
             if (tableView.getSelectionModel().getSelectedItem() == null) {
-                warningText.setVisible(true);
+                warningLabel.showError();
             } else {
                 MainApp.easyScene.showScene("/deletePage.fxml");
             }

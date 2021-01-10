@@ -2,6 +2,7 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
+import helper.components.WarningLabel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,6 +12,7 @@ import javafx.scene.text.Text;
 
 
 public class AddPageController {
+
 
     @FXML
     private TextField buchtitleTextField;
@@ -25,9 +27,10 @@ public class AddPageController {
     @FXML
     private Button cancelButton;
     @FXML
-    private Text errorText;
+    private WarningLabel errorLabel;
     @FXML
     protected void initialize() {
+        errorLabel.setIdleState();
         addButton.setOnAction(addButtonEvent);
         cancelButton.setOnAction(cancelButtonEvent);
     }
@@ -38,7 +41,7 @@ public class AddPageController {
         public void handle(ActionEvent event) {
 
             if (buchtitleTextField.getText().isBlank() || autorTextField.getText().isBlank() || genreTextField.getText().isBlank() || isbnTextField.getText().isBlank()) {
-                errorText.setVisible(true);
+                errorLabel.showError();
             } else {
                 String SQLfetch = "INSERT INTO books (title,autor,genre,isbn,fk_user_id) VALUES ('" + buchtitleTextField.getText() + "','" + autorTextField.getText() + "','" + genreTextField.getText() + "','" + isbnTextField.getText() + "','" + Data.getId() +"')";
 
