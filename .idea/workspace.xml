@@ -30,8 +30,14 @@
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" afterDir="false" />
     </list>
+    <list id="a78c869a-ad4f-4fe3-9fde-cd853af463c6" name="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" comment="" />
+    <list id="846ae55c-fc54-4ce2-a144-1c5bf139f978" name="AIO-36: WarningLabel correct error" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -382,6 +388,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610313720818" />
+    <state x="618" y="326" key="VCS.ChangelistChooser" timestamp="1610315377399">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="326" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1610315377399" />
     <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1610313699153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

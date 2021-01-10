@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import helper.components.WarningLabel?>
+<!-- <?import helper.components.WarningLabel?> -->
 <AnchorPane prefHeight="287.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.RegisterPageController">
    <children>
       <TextField fx:id="emailTextField" layoutX="183.0" layoutY="70.0" prefHeight="30.0" prefWidth="306.0" promptText="E-Mail" style="-fx-background-radius: 30;" />
@@ -40,7 +40,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <WarningLabel fx:id="warningLabel"  layoutX="228.0" layoutY="301.0"   />
+     <!-- <WarningLabel fx:id="warningLabel"  layoutX="228.0" layoutY="301.0"   /> -->
       <HBox alignment="CENTER" layoutX="183.0" layoutY="230.0" prefHeight="83.0" prefWidth="306.0">
          <children>
             <Button fx:id="registerLoginButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Registrieren">

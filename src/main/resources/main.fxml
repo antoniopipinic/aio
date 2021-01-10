@@ -21,7 +21,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import helper.components.WarningLabel?>
+<!-- <?import helper.components.WarningLabel?> -->
 <SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="866.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.MainController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="781.0">
@@ -42,7 +42,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <WarningLabel fx:id="warningLabel" layoutX="69.0" layoutY="460.0" prefHeight="17.0" prefWidth="142.0" text="Bitte ein Buch auswählen" textFill="RED" />
+           <!-- <WarningLabel fx:id="warningLabel" layoutX="69.0" layoutY="460.0" prefHeight="17.0" prefWidth="142.0" text="Bitte ein Buch auswählen" textFill="RED" /> -->
             <Button fx:id="addButton" layoutX="79.0" layoutY="246.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Hinzufügen">
                <font>
                   <Font name="System Bold" size="15.0" />
