@@ -40,7 +40,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <WarningLabel fx:id="errorRegisterText"  layoutX="228.0" layoutY="301.0"   />
+      <WarningLabel fx:id="warningLabel"  layoutX="228.0" layoutY="301.0"   />
       <HBox alignment="CENTER" layoutX="183.0" layoutY="230.0" prefHeight="83.0" prefWidth="306.0">
          <children>
             <Button fx:id="registerLoginButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Registrieren">

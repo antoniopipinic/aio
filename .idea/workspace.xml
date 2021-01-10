@@ -22,27 +22,14 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/components/WarningLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609955865806</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design">
+      <created>1610313696276</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610313696277</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +332,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -364,28 +358,33 @@
     <MESSAGE value="AIO-32: Fixed tab order" />
     <MESSAGE value="AIO-21: Implement logout function" />
     <MESSAGE value="AIO-33: added Beenden Button am LogIn Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-33: added Beenden Button am LogIn Screen" />
+    <MESSAGE value="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1610312825822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1610312825822" />
-    <state width="1493" height="160" key="GridCell.Tab.0.bottom" timestamp="1610312420848">
+    <state width="1493" height="160" key="GridCell.Tab.0.bottom" timestamp="1610313720818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610312420848" />
-    <state width="1493" height="160" key="GridCell.Tab.0.center" timestamp="1610312420848">
+    <state width="1493" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610313720818" />
+    <state width="1493" height="160" key="GridCell.Tab.0.center" timestamp="1610313720818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610312420848" />
-    <state width="1493" height="160" key="GridCell.Tab.0.left" timestamp="1610312420848">
+    <state width="1493" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610313720818" />
+    <state width="1493" height="160" key="GridCell.Tab.0.left" timestamp="1610313720818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610312420848" />
-    <state width="1493" height="160" key="GridCell.Tab.0.right" timestamp="1610312420848">
+    <state width="1493" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610313720818" />
+    <state width="1493" height="160" key="GridCell.Tab.0.right" timestamp="1610313720818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610312420848" />
+    <state width="1493" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610313720818" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1610313699153">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610313699153" />
   </component>
 </project>
