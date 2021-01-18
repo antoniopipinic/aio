@@ -2,6 +2,7 @@ package org.openjfx;
 
 import helper.Data;
 import helper.DatenbankMG;
+import helper.PasswordSecurity;
 import helper.components.WarningLabel;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -9,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.event.ActionEvent;
 
+import javax.swing.*;
 import java.sql.ResultSet;
 
 public class LoginPageController {
@@ -20,18 +22,21 @@ public class LoginPageController {
     @FXML
     private PasswordField passwordField;
 
-    @FXML
-    private void loginButtonOnAction(ActionEvent event) {
+    public void loginButtonOnAction(ActionEvent event) throws NoSuchAlgorithmException {
         if (!usernameTextField.getText().isBlank() && !passwordField.getText().isBlank()) {
             validLogin();
         } else {
             loginMessageLabel.setText("Bitte Benutzername und Passwort eingeben!");
             loginMessageLabel.showError();
         }
+
     }
 
-    private void validLogin() {
-        String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + passwordField.getText() + "'";
+
+    private void validLogin() throws NoSuchAlgorithmException {
+
+
+        String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + PasswordSecurity.generateHash(passwordField.getText(), PasswordSecurity.getAlgorithm()) + "'";
         Data.setUsername(usernameTextField.getText());
         try {
             //Database management for login
