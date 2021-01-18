@@ -60,7 +60,7 @@ public class MainController {
         TableColumn autorColumnPublic = new TableColumn<>("Autor");
         TableColumn genreColumnPublic = new TableColumn<>("Genre");
         TableColumn isbnColumnPublic = new TableColumn<>("ISBN");
-        TableColumn ownerColumnPublic = new TableColumn<>("Eigentf\\u00fcmer");
+        TableColumn ownerColumnPublic = new TableColumn<>("Eigent\u00fcmer");
 
         //Adding Columns to both tableviews
         tableView.getColumns().addAll(titleColumn, autorColumn, genreColumn, isbnColumn);

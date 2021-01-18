@@ -31,10 +31,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
     <list id="a78c869a-ad4f-4fe3-9fde-cd853af463c6" name="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" comment="" />
     <list id="846ae55c-fc54-4ce2-a144-1c5bf139f978" name="AIO-36: WarningLabel correct error" comment="" />
@@ -331,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610315903535</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="AIO-31: Introduced public library">
+      <created>1610991006798</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610991006798</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +380,8 @@
     <MESSAGE value="AIO-33: added Beenden Button am LogIn Screen" />
     <MESSAGE value="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" />
     <MESSAGE value="AIO-36: WarningLabel not yet visible" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-36: WarningLabel not yet visible" />
+    <MESSAGE value="AIO-31: Introduced public library" />
+    <option name="LAST_COMMIT_MESSAGE" value="AIO-31: Introduced public library" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1610989305992">
@@ -387,22 +392,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610649152667" />
-    <state width="1493" height="194" key="GridCell.Tab.0.bottom" timestamp="1610990677957">
+    <state width="1493" height="194" key="GridCell.Tab.0.bottom" timestamp="1610991048775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610990677957" />
-    <state width="1493" height="194" key="GridCell.Tab.0.center" timestamp="1610990677956">
+    <state width="1493" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610991048775" />
+    <state width="1493" height="194" key="GridCell.Tab.0.center" timestamp="1610991048775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610990677956" />
-    <state width="1493" height="194" key="GridCell.Tab.0.left" timestamp="1610990677956">
+    <state width="1493" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610991048775" />
+    <state width="1493" height="194" key="GridCell.Tab.0.left" timestamp="1610991048775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610990677956" />
-    <state width="1493" height="194" key="GridCell.Tab.0.right" timestamp="1610990677957">
+    <state width="1493" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610991048775" />
+    <state width="1493" height="194" key="GridCell.Tab.0.right" timestamp="1610991048775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610990677957" />
+    <state width="1493" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610991048775" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1610347028516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
