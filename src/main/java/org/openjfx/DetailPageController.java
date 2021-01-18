@@ -22,41 +22,30 @@ public class DetailPageController {
     @FXML
     private Text isbnText;
 
-
     @FXML
     protected void initialize() {
-
         //Set SQL command
-        String SQLfetch = "SELECT DISTINCT * FROM books WHERE title = '" + Data.getDataString() + "'";
-
         try {
-
+            String SQLfetch = "SELECT DISTINCT * FROM books WHERE title = '" + Data.getDataString() + "'";
             ResultSet queryResult = DatenbankMG.performQuery(SQLfetch);
-
-
             while (queryResult.next()) {
                 autorText.setText(queryResult.getString(3));
                 genreText.setText(queryResult.getString(4));
                 isbnText.setText(queryResult.getString(5));
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
         titleText.setText(Data.getDataString());
-        //Closing DB connection
-
-
         //Adding Event for Click
         backButton.setOnAction(backButtonEvent);
     }
 
     //Handle Back Button Click
-    EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
+    private EventHandler<ActionEvent> backButtonEvent = new EventHandler<ActionEvent>() {
+        @Override
         public void handle(ActionEvent event) {
-
             MainApp.easyScene.showScene("/main.fxml");
         }
     };

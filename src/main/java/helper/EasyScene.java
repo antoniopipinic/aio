@@ -13,7 +13,6 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import org.openjfx.MainApp;
 
 import java.io.IOException;
 
@@ -22,7 +21,6 @@ public class EasyScene {
     private Parent window;
     private Scene scene;
     private String resourceName;
-
 
     private double xOffset = 0, yOffset = 0;
     private double newX = 0, newY = 0;
@@ -37,8 +35,6 @@ public class EasyScene {
         stage = primaryStage;
         stage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setResizable(false);
-
-
     }
 
     public void showScene(String resourceName) {
@@ -48,7 +44,6 @@ public class EasyScene {
         ftOut.setToValue(0.0);
         ftOut.setOnFinished(fadeOutEndEvent);
         ftOut.play();
-
     }
 
     private final EventHandler<ActionEvent> fadeOutEndEvent = new EventHandler<ActionEvent>() {
@@ -84,7 +79,6 @@ public class EasyScene {
                     yOffset = event.getSceneY();
                 }
             });
-
             showScene();
         }
     };
@@ -111,5 +105,4 @@ public class EasyScene {
 
         ;
     };
-
 }

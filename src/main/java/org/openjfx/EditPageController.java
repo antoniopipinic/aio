@@ -4,7 +4,6 @@ import helper.Data;
 import helper.DatenbankMG;
 import helper.components.WarningLabel;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.sql.ResultSet;
@@ -28,7 +27,6 @@ public class EditPageController {
         } else {
             String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"'WHERE title='"+Data.getDataString()+ "';";
             DatenbankMG.performUpdate(SQLfetch);
-
 
             //Go back to main Page
             MainApp.easyScene.showScene("/main.fxml");
