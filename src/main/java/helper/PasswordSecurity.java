@@ -7,12 +7,11 @@ import java.security.SecureRandom;
 public class PasswordSecurity {
 
     private static String algorithm = "SHA-256";
-    private static byte[] salt = createSalt();
+    private static String data ="abc";
 
     public static String generateHash(String data, String algorithm) throws NoSuchAlgorithmException{
         MessageDigest digest = MessageDigest.getInstance(algorithm);
         digest.reset();
-        digest.update(salt);
         byte[] hash = digest.digest(data.getBytes());
         return bytesToStringHex(hash);
     }
@@ -27,19 +26,7 @@ public class PasswordSecurity {
         }
         return new String(hexChars);
     }
-
     public static String getAlgorithm() {
         return algorithm;
-    }
-
-    public static byte[] createSalt() {
-        byte[] bytes = new byte[20];
-        SecureRandom random = new SecureRandom();
-        random.nextBytes(bytes);
-        return bytes;
-    }
-
-    public static byte[] getSalt() {
-        return salt;
     }
 }
