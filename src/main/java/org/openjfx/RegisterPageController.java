@@ -34,8 +34,6 @@ public class RegisterPageController {
     private Button registerCancelButton;
     @FXML
     private Text errorRegisterText;
-    @FXML
-    private Text successfulRegisterText;
 
     @FXML
     protected void initialize() {
@@ -44,10 +42,8 @@ public class RegisterPageController {
     }
 
     EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
-
         @Override
         public void handle(ActionEvent event) {
-
             if (emailTextField.getText().isBlank() || passwordTextField1.getText().isBlank() || passwordTextField2.getText().isBlank() || fullnameTextField.getText().isBlank()) {
                 errorRegisterText.setVisible(true);
                 errorRegisterText.setText("Bitte alle Felder ausf\u00fcllen!");
@@ -62,40 +58,18 @@ public class RegisterPageController {
                 } catch (NoSuchAlgorithmException e) {
                     e.printStackTrace();
                 }
-
-                //String SQLfetch = "INSERT INTO users (email,password,fullname) VALUES ('" + emailTextField.getText() + "','" + passwordTextField1.getText() + "','" + fullnameTextField.getText()  + "')";
-
                 DatenbankMG.performUpdate(SQLfetch);
-
-
                 //Go back to main Page
-                Stage stage = (Stage) registerCancelButton.getScene().getWindow();
-                Parent mainWindow = null;
-                try {
-                    mainWindow = FXMLLoader.load(getClass().getResource("/login.fxml"));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                stage.setScene(new Scene(mainWindow));
-
+                MainApp.easyScene.showScene("/login.fxml");
             }
         }
-
     };
 
     EventHandler<ActionEvent> cancelButtonEvent = new EventHandler<ActionEvent>() {
-
         @Override
         public void handle(ActionEvent event) {
-            Stage stage = (Stage) registerCancelButton.getScene().getWindow();
-            Parent mainWindow = null;
-            try {
-                mainWindow = FXMLLoader.load(getClass().getResource("/login.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            stage.setScene(new Scene(mainWindow));
+            //Go back to main Page
+            MainApp.easyScene.showScene("/login.fxml");
         }
-
     };
 }

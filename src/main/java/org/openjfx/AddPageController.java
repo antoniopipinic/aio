@@ -8,7 +8,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 
 public class AddPageController {
@@ -34,13 +33,13 @@ public class AddPageController {
     }
 
     private EventHandler<ActionEvent> addButtonEvent = new EventHandler<ActionEvent>() {
-
+        private int isRead = 0;
         @Override
         public void handle(ActionEvent event) {
             if (buchtitleTextField.getText().isBlank() || autorTextField.getText().isBlank() || genreTextField.getText().isBlank() || isbnTextField.getText().isBlank()) {
                 errorLabel.showError();
             } else {
-                String SQLfetch = "INSERT INTO books (title,autor,genre,isbn,fk_user_id) VALUES ('" + buchtitleTextField.getText() + "','" + autorTextField.getText() + "','" + genreTextField.getText() + "','" + isbnTextField.getText() + "','" + Data.getId() +"')";
+                String SQLfetch = "INSERT INTO books (title,autor,genre,isbn,ausgeliehen,fk_user_id) VALUES ('" + buchtitleTextField.getText() + "','" + autorTextField.getText() + "','" + genreTextField.getText() + "','" + isbnTextField.getText() + "','" + isRead + "','" + Data.getId() +"')";
                 DatenbankMG.performUpdate(SQLfetch);
                 //Go back to main Page
                 MainApp.easyScene.showScene("/main.fxml");

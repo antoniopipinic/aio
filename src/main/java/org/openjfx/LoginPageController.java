@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.event.ActionEvent;
 
-import javax.swing.*;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 
 public class LoginPageController {
