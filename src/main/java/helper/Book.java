@@ -5,12 +5,18 @@ public class Book {
     private String author = null;
     private String genre = null;
     private String isbn = null;
+    private String owner = null;
 
-    public Book(String title, String author, String genre, String isbn) {
+    public Book(String title, String author, String genre, String isbn, String owner) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.isbn = isbn;
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
     }
 
     public String getTitle() {

@@ -27,9 +27,12 @@ import java.sql.ResultSet;
 public class MainController {
 
     ObservableList<Book> books = FXCollections.<Book>observableArrayList();
+    ObservableList<Book> publicBooks = FXCollections.<Book>observableArrayList();
 
     @FXML
     private TableView tableView = new TableView();
+    @FXML
+    private TableView publicLibraryTableView = new TableView();
     @FXML
     private Button addButton;
     @FXML
@@ -48,31 +51,40 @@ public class MainController {
 
     @FXML
     protected void initialize() {
-        TableColumn<Book, String> titleColumn = new TableColumn<>("Titel");
-
-
+        TableColumn titleColumn = new TableColumn<>("Titel");
         TableColumn autorColumn = new TableColumn<>("Autor");
-
-
         TableColumn genreColumn = new TableColumn<>("Genre");
-
-
         TableColumn isbnColumn = new TableColumn<>("ISBN");
 
+        TableColumn titleColumnPublic = new TableColumn<>("Titel");
+        TableColumn autorColumnPublic = new TableColumn<>("Autor");
+        TableColumn genreColumnPublic = new TableColumn<>("Genre");
+        TableColumn isbnColumnPublic = new TableColumn<>("ISBN");
+        TableColumn ownerColumnPublic = new TableColumn<>("Eigentf\\u00fcmer");
 
+        //Adding Columns to both tableviews
         tableView.getColumns().addAll(titleColumn, autorColumn, genreColumn, isbnColumn);
+        publicLibraryTableView.getColumns().addAll(titleColumnPublic, autorColumnPublic, genreColumnPublic, ownerColumnPublic);
+
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         autorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
 
-        String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
-        //Getting all Books from DB
+        titleColumnPublic.setCellValueFactory(new PropertyValueFactory<>("title"));
+        autorColumnPublic.setCellValueFactory(new PropertyValueFactory<>("author"));
+        isbnColumnPublic.setCellValueFactory(new PropertyValueFactory<>("isbn"));
+        genreColumnPublic.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        ownerColumnPublic.setCellValueFactory(new PropertyValueFactory<>("owner"));
+
+
+        //Getting all private Books from DB
         try {
+            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
 
             while (queryResult.next()) {
-                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4));
+                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getString(5));
                 books.add(book);
             }
 
@@ -80,9 +92,27 @@ public class MainController {
             e.printStackTrace();
             e.getCause();
         }
-        //Showing all books
+
+        //Getting all public Books from DB
+        try {
+            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id";
+            ResultSet queryResult = DatenbankMG.performQuery(sqlString);
+
+            while (queryResult.next()) {
+                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getString(5));
+                publicBooks.add(book);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+        //Showing all private books
         tableView.getItems().addAll(books);
-        //Show Setailpage when clicking on a book
+        //Showing all public books
+        publicLibraryTableView.getItems().addAll(publicBooks);
+        //Show Detailpage when clicking on a book
         tableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
             @Override
@@ -96,19 +126,30 @@ public class MainController {
                 }
             }
         });
+        //Double click on a public Book -> Detail Page
+        publicLibraryTableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent click) {
+
+                if (click.getClickCount() == 2) {
+                    //Save book title for the next Page
+                    Data.setDataString(((Book) publicLibraryTableView.getSelectionModel().getSelectedItem()).getTitle());
+
+                    MainApp.easyScene.showScene("/detailPage.fxml");
+                }
+            }
+        });
 
         addButton.setOnAction(addButtonEvent);
         editButton.setOnAction(editButtonEvent);
         deleteButton.setOnAction(deleteButtonEvent);
         searchButton.setOnAction(searchButtonEvent);
 
-
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
         //LogOut Stage when clicking on logout img
         logOutIMG.setOnMouseClicked(logOutClickedEvent);
-
-
     }
 
     private final EventHandler logOutClickedEvent = new EventHandler() {

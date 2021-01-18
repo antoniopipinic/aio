@@ -30,7 +30,6 @@ public class AddPageController {
     private WarningLabel errorLabel;
     @FXML
     protected void initialize() {
-        errorLabel.setIdleState();
         addButton.setOnAction(addButtonEvent);
         cancelButton.setOnAction(cancelButtonEvent);
     }
