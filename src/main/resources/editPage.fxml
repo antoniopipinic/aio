@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <!-- <?import helper.components.WarningLabel?> -->
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.EditPageController">
+
+<AnchorPane prefHeight="322.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.EditPageController">
    <children>
       <TextField fx:id="titleTextField" layoutX="116.0" layoutY="83.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
       <TextField fx:id="authorTextField" layoutX="116.0" layoutY="123.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
@@ -16,15 +19,26 @@
       <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel" />
       <Text layoutX="22.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
       <Text layoutX="21.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
-      <Button fx:id="savenbutton" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="52.0" text="Save">
+      <Button fx:id="savenbutton" layoutX="149.0" layoutY="264.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Speichern">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Button fx:id="cancelbutton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#cancel" text="Cancel">
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="cancelbutton" layoutX="300.0" layoutY="264.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Abbrechen">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
       <Text layoutX="21.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+      <Text fx:id="schlagwortText1" layoutX="157.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buch bearbeiten" textAlignment="CENTER" wrappingWidth="286.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
      <!-- <WarningLabel fx:id="errorLabel" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" /> -->
    </children>
 </AnchorPane>
