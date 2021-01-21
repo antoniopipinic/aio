@@ -69,7 +69,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fx:id="titleText" layoutX="170.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
+            <Text fx:id="titleText" layoutX="170.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -103,6 +103,11 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></TextField>
+            <Text fx:id="welcomeMessage" layoutX="172.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Willkommen, Username ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
             </children></AnchorPane>
     </items>
 </SplitPane>

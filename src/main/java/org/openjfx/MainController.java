@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 import java.sql.ResultSet;
 
@@ -40,6 +41,8 @@ public class MainController {
     private Button searchButton;
     @FXML
     private ImageView logOutIMG;
+    @FXML
+    private Text welcomeMessage;
 
     @FXML
     protected void initialize() {
@@ -80,6 +83,7 @@ public class MainController {
             while (queryResult.next()) {
                 Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getBoolean(5), queryResult.getString(6));
                 books.add(book);
+                welcomeMessage.setText("Willkommen, "+Data.getFullName());
             }
         } catch (Exception e) {
             e.printStackTrace();

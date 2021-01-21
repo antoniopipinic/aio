@@ -6,6 +6,7 @@ public final class Data {
     private static String dataString = "";
     private static int dataInt = 0;
     private static String username;
+    private static String fullName;
     private static String id;
 
     public static void setDataString(String string){
@@ -42,7 +43,6 @@ public final class Data {
 
     public static String getId() {
         String userNameId = "SELECT id FROM users WHERE email = '" + getUsername() + "'";
-
         try {
             ResultSet queryResult = DatenbankMG.performQuery(userNameId);
             while (queryResult.next()) {
@@ -54,6 +54,24 @@ public final class Data {
             e.getCause();
         }
         return id;
+    }
+
+    public static String getFullName() {
+        String sqlStatement = "SELECT fullname FROM users WHERE email = '" + getUsername() + "'";
+        try {
+            ResultSet queryResult = DatenbankMG.performQuery(sqlStatement);
+            while (queryResult.next()) {
+                fullName = queryResult.getString(1);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+        if(fullName==null || fullName.isEmpty()){
+            return "";
+        }
+        return fullName;
     }
 
     public static void setId(String id) {
