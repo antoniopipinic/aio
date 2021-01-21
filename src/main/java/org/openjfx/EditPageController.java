@@ -23,12 +23,18 @@ public class EditPageController {
     private WarningLabel errorLabel;
     @FXML
     private ChoiceBox isReadBox = new ChoiceBox();
+    public final String LABEL_VERFUEGBAR="verf\u00fcgbar";
+    public final String LABEL_NICHT_VERFUEGBAR="nicht verf\u00fcgbar";
     @FXML
     private void save(){
         if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
             errorLabel.showError();
         } else {
-            String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"',ausgeliehen='"+isReadBox.getValue()+"'WHERE title='"+Data.getDataString()+ "';";
+            int read = isReadBox.getValue().toString().equalsIgnoreCase(LABEL_VERFUEGBAR)? 1 : 0;
+            String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"',ausgeliehen='"+read+"'WHERE title='"+Data.getDataString()+ "';";
+            System.out.println(SQLfetch);
+            System.out.println(isReadBox.getValue());
+            System.out.println(read);
             DatenbankMG.performUpdate(SQLfetch);
 
             //Go back to main Page
@@ -50,9 +56,8 @@ public class EditPageController {
                 authorTextField.setText(queryResult.getString(3));
                 genreTextField.setText(queryResult.getString(4));
                 ISBNTextField.setText(queryResult.getString(5));
-                isReadBox.getItems().addAll(queryResult.getBoolean(6));
-                isReadBox.getItems().addAll("0","1");
-                isReadBox.setValue(queryResult.getBoolean(6));
+                isReadBox.getItems().addAll(LABEL_NICHT_VERFUEGBAR,LABEL_VERFUEGBAR);
+                isReadBox.setValue(queryResult.getBoolean(6)==true? LABEL_VERFUEGBAR : LABEL_NICHT_VERFUEGBAR);
             }
             titleTextField.requestFocus();
 

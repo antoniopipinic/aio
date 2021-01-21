@@ -32,10 +32,7 @@ public class LoginPageController {
 
     }
 
-
     private void validLogin() throws NoSuchAlgorithmException {
-
-
         String verifyLogin = "SELECT count(1) FROM users WHERE email = '" + usernameTextField.getText() + "' AND password = '" + PasswordSecurity.generateHash(passwordField.getText(), PasswordSecurity.getAlgorithm()) + "'";
         Data.setUsername(usernameTextField.getText());
         try {
