@@ -61,7 +61,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="searchButton" layoutX="33.0" layoutY="380.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Suchen">
+            <Button fx:id="editButton" layoutX="39.0" layoutY="341.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bearbeiten">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -99,9 +99,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField fx:id="fastSearchButton" layoutX="170.0" layoutY="90.0" prefHeight="25.0" prefWidth="195.0" promptText="Sucher">
+            <TextField fx:id="fastSearchField" layoutX="180.0" layoutY="85.0" prefHeight="25.0" prefWidth="257.0" promptText="Suche">
                <cursor>
-                  <Cursor fx:constant="HAND" />
+                  <Cursor fx:constant="TEXT" />
                </cursor></TextField>
             <Text fx:id="welcomeMessage" layoutX="172.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Willkommen, Username ">
                <font>
