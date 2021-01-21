@@ -36,8 +36,8 @@ public class WarningLabel extends Label {
         super.setVisible(true);
         ftIn.setFromValue(0);
         ftIn.setToValue(1);
-        scaleTransition.setByX(0.4);
-        scaleTransition.setByY(0.4);
+        scaleTransition.setByX(0.2);
+        scaleTransition.setByY(0.2);
         scaleTransition.setInterpolator(Interpolator.EASE_BOTH);
         //Let animation run 2 times
         scaleTransition.setCycleCount(4);

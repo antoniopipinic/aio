@@ -24,20 +24,20 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/PasswordSecurity" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0aec2e8-9d1c-40f2-9e81-87b7efcec310" name="Default Changelist" comment="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java">
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helper/components/WarningLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/components/WarningLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/addPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/addPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" afterDir="false" />
     </list>
     <list id="a5146909-f57c-4734-bfb4-a13fab4d6a90" name="AIO-15: Changed Edit Page (Design) and added Heading to Edit Page" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +124,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -170,9 +170,7 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -191,9 +189,7 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -426,6 +422,24 @@
     <MESSAGE value="AIO-37: Added the function for displaying reading a book (Version 3.0)&#10;Small error fixes and design fixes" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="102" key="GridCell.Tab.0.bottom" timestamp="1611250375069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="102" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611250375069" />
+    <state width="1493" height="102" key="GridCell.Tab.0.center" timestamp="1611250375069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="102" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611250375069" />
+    <state width="1493" height="102" key="GridCell.Tab.0.left" timestamp="1611250375069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="102" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611250375069" />
+    <state width="1493" height="102" key="GridCell.Tab.0.right" timestamp="1611250375069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="102" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611250375069" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

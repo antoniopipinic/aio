@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<!-- <?import helper.components.WarningLabel?> -->
+<?import helper.components.WarningLabel?>
 
 <AnchorPane prefHeight="376.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right top, #f1b25f, #bec976, #96d6a7, #8fdad2, #add8e6); -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.EditPageController">
    <children>
@@ -43,6 +43,6 @@
       <ChoiceBox fx:id="isReadBox" layoutX="128.0" layoutY="248.0" prefHeight="25.0" prefWidth="150.0" />
       <Text layoutX="19.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zum ausborgen" />
       <Text layoutX="14.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-     <!-- <WarningLabel fx:id="errorLabel" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" /> -->
+     <WarningLabel fx:id="errorLabel" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" />
    </children>
 </AnchorPane>

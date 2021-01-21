@@ -2,19 +2,14 @@ package org.openjfx;
 
 import helper.DatenbankMG;
 import helper.PasswordSecurity;
+import helper.components.WarningLabel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
 
@@ -33,7 +28,7 @@ public class RegisterPageController {
     @FXML
     private Button registerCancelButton;
     @FXML
-    private Text errorRegisterText;
+    private WarningLabel errorRegisterText;
 
     @FXML
     protected void initialize() {
@@ -45,12 +40,10 @@ public class RegisterPageController {
         @Override
         public void handle(ActionEvent event) {
             if (emailTextField.getText().isBlank() || passwordTextField1.getText().isBlank() || passwordTextField2.getText().isBlank() || fullnameTextField.getText().isBlank()) {
-                errorRegisterText.setVisible(true);
                 errorRegisterText.setText("Bitte alle Felder ausf\u00fcllen!");
+                errorRegisterText.showError();
             }
             else if(passwordTextField1.getText().equals(passwordTextField2.getText())){
-                errorRegisterText.setVisible(true);
-                errorRegisterText.setText("Die Passwörter müssen übereinstimmen!");
 
                 String SQLfetch = null;
                 try {
@@ -61,6 +54,9 @@ public class RegisterPageController {
                 DatenbankMG.performUpdate(SQLfetch);
                 //Go back to main Page
                 MainApp.easyScene.showScene("/login.fxml");
+            }else {
+                errorRegisterText.setText("Die Passwörter müssen übereinstimmen!");
+                errorRegisterText.showError();
             }
         }
     };
