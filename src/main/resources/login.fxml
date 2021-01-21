@@ -13,12 +13,13 @@
 <?import javafx.scene.text.Text?>
 
 <!-- <?import helper.components.WarningLabel?> -->
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="585.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.LoginPageController">
    <children>
       <AnchorPane layoutX="205.0" layoutY="21.0" prefHeight="360.0" prefWidth="374.0" style="-fx-background-color: white; -fx-background-radius: 15;">
          <children>
-            <TextField fx:id="usernameTextField" layoutX="94.0" layoutY="107.0" onKeyPressed="#loginButtonOnAction" prefHeight="31.0" prefWidth="225.0" promptText="Benutzername" style="-fx-background-radius: 30;" />
-            <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="171.0" onKeyPressed="#loginButtonOnAction" prefHeight="31.0" prefWidth="225.0" promptText="Passwort" style="-fx-background-radius: 30;" />
+            <TextField fx:id="usernameTextField" layoutX="94.0" layoutY="107.0" prefHeight="31.0" prefWidth="225.0" promptText="Benutzername" style="-fx-background-radius: 30;" />
+            <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="171.0" prefHeight="31.0" prefWidth="225.0" promptText="Passwort" style="-fx-background-radius: 30;" />
             <Button fx:id="loginButton" defaultButton="true" layoutX="92.0" layoutY="238.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Log in">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -70,7 +71,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="26.0" layoutY="96.0">
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="34.0" layoutY="96.0">
                <image>
                   <Image url="@../../../Images/Giraffe.png" />
                </image>

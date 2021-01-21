@@ -14,12 +14,12 @@
    <children>
       <TextField fx:id="titleTextField" layoutX="128.0" layoutY="83.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
       <TextField fx:id="authorTextField" layoutX="128.0" layoutY="123.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
-      <TextField fx:id="genreTextField" layoutX="128.0" layoutY="168.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
+      <TextField fx:id="genreTextField" layoutX="128.0" layoutY="165.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
       <TextField fx:id="ISBNTextField" layoutX="128.0" layoutY="208.0" prefHeight="25.0" prefWidth="391.0" style="-fx-background-radius: 30;" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchtitel" />
       <Text layoutX="22.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
-      <Text layoutX="21.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
+      <Text layoutX="21.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
       <Button fx:id="savenbutton" layoutX="149.0" layoutY="315.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Speichern">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -40,10 +40,9 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="isReadBox" layoutX="126.0" layoutY="246.0" prefHeight="40.0" prefWidth="150.0" />
-      <Text layoutX="14.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zum ausborgen" />
-      <Text layoutX="14.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 = ich lese noch" />
-      <Text layoutX="14.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 = zum ausborgen" />
+      <ChoiceBox fx:id="isReadBox" layoutX="128.0" layoutY="248.0" prefHeight="25.0" prefWidth="150.0" />
+      <Text layoutX="19.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zum ausborgen" />
+      <Text layoutX="14.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" />
      <!-- <WarningLabel fx:id="errorLabel" layoutX="359.0" layoutY="254.0" prefHeight="67.0" prefWidth="143.0" text="Bitte alle Felder ausfüllen" textFill="#ff0404" visible="false" /> -->
    </children>
 </AnchorPane>

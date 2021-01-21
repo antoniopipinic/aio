@@ -6,7 +6,7 @@ public class Book {
     private String genre = null;
     private String isbn = null;
     private String owner = null;
-    private boolean isRead = false;
+    private String isRead = null;
 
     public Book(String title, String author, String genre, String isbn, boolean isRead, String owner) {
         this.title = title;
@@ -14,7 +14,7 @@ public class Book {
         this.genre = genre;
         this.isbn = isbn;
         this.owner = owner;
-        this.isRead = isRead;
+        setIsRead(isRead);
     }
 
     public String getOwner() {
@@ -37,7 +37,7 @@ public class Book {
         return isbn;
     }
 
-    public boolean getIsRead() {return isRead;};
+    public String getIsRead() {return isRead; }
 
     public void setTitle(String title) {
         this.title = title;
@@ -55,7 +55,5 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public void setIsRead(boolean isRead) {
-        this.isRead = isRead;
-    }
+    public void setIsRead(boolean isRead) { this.isRead = isRead == true ? "verf\u00fcgbar" : "nicht verf\u00fcgbar"; }
 }

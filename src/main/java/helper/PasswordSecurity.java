@@ -7,7 +7,6 @@ import java.security.SecureRandom;
 public class PasswordSecurity {
 
     private static String algorithm = "SHA-256";
-    private static String data ="abc";
 
     public static String generateHash(String data, String algorithm) throws NoSuchAlgorithmException{
         MessageDigest digest = MessageDigest.getInstance(algorithm);
