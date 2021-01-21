@@ -66,7 +66,7 @@
       </AnchorPane>
       <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="392.0" prefWidth="234.0" style="-fx-background-color: linear-gradient(to right top, #add8e6, #8fdad2, #96d6a7, #bec976, #f1b25f); -fx-background-radius: 15;">
          <children>
-            <Text fill="WHITE" layoutX="13.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alles in Ordnung?">
+            <Text layoutX="13.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alles in Ordnung?">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>

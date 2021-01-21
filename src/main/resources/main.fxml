@@ -37,7 +37,7 @@
                </cursor>
             </ImageView>
            <!-- <WarningLabel fx:id="warningLabel" layoutX="69.0" layoutY="460.0" prefHeight="17.0" prefWidth="142.0" text="Bitte ein Buch auswählen" textFill="RED" /> -->
-            <Button fx:id="addButton" layoutX="33.0" layoutY="246.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Hinzufügen">
+            <Button fx:id="addButton" layoutX="30.0" layoutY="246.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Hinzufügen">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -45,7 +45,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="deleteButton" layoutX="33.0" layoutY="287.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Löschen">
+            <Button fx:id="deleteButton" layoutX="30.0" layoutY="303.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Löschen">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -53,7 +53,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="editButton" layoutX="33.0" layoutY="333.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bearbeiten">
+            <Button fx:id="editButton" layoutX="30.0" layoutY="361.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bearbeiten">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -61,15 +61,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="editButton" layoutX="39.0" layoutY="341.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #F3B25F; -fx-background-radius: 10;" text="Bearbeiten">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Text fx:id="titleText" layoutX="170.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
+            <Text fx:id="titleText" layoutX="168.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bibliothek" wrappingWidth="286.0">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -99,11 +91,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField fx:id="fastSearchField" layoutX="180.0" layoutY="85.0" prefHeight="25.0" prefWidth="257.0" promptText="Suche">
+            <TextField fx:id="fastSearchField" layoutX="168.0" layoutY="82.0" prefHeight="25.0" prefWidth="257.0" promptText="Suche">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor></TextField>
-            <Text fx:id="welcomeMessage" layoutX="172.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Willkommen, Username ">
+            <Text fx:id="welcomeMessage" layoutX="168.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Willkommen, Username ">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
