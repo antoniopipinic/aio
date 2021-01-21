@@ -47,34 +47,38 @@ public class MainController {
         TableColumn autorColumn = new TableColumn<>("Autor");
         TableColumn genreColumn = new TableColumn<>("Genre");
         TableColumn isbnColumn = new TableColumn<>("ISBN");
+        TableColumn isReadColumn = new TableColumn<>("IsRead?");
 
         TableColumn titleColumnPublic = new TableColumn<>("Titel");
         TableColumn autorColumnPublic = new TableColumn<>("Autor");
         TableColumn genreColumnPublic = new TableColumn<>("Genre");
         TableColumn isbnColumnPublic = new TableColumn<>("ISBN");
+        TableColumn isReadColumnPublic = new TableColumn<>("IsRead?");
         TableColumn ownerColumnPublic = new TableColumn<>("Eigent\u00fcmer");
 
         //Adding Columns to both tableviews
-        tableView.getColumns().addAll(titleColumn, autorColumn, genreColumn, isbnColumn);
-        publicLibraryTableView.getColumns().addAll(titleColumnPublic, autorColumnPublic, genreColumnPublic, ownerColumnPublic);
+        tableView.getColumns().addAll(titleColumn, autorColumn, genreColumn, isbnColumn, isReadColumn);
+        publicLibraryTableView.getColumns().addAll(titleColumnPublic, autorColumnPublic, genreColumnPublic, isReadColumnPublic, ownerColumnPublic);
 
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         autorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        isReadColumn.setCellValueFactory(new PropertyValueFactory<>("isRead"));
 
         titleColumnPublic.setCellValueFactory(new PropertyValueFactory<>("title"));
         autorColumnPublic.setCellValueFactory(new PropertyValueFactory<>("author"));
         isbnColumnPublic.setCellValueFactory(new PropertyValueFactory<>("isbn"));
         genreColumnPublic.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        isReadColumnPublic.setCellValueFactory(new PropertyValueFactory<>("isRead"));
         ownerColumnPublic.setCellValueFactory(new PropertyValueFactory<>("owner"));
 
         //Getting all private Books from DB
         try {
-            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
+            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, books.ausgeliehen, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
             while (queryResult.next()) {
-                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getString(5));
+                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getBoolean(5), queryResult.getString(6));
                 books.add(book);
             }
         } catch (Exception e) {
@@ -84,10 +88,10 @@ public class MainController {
 
         //Getting all public Books from DB
         try {
-            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id";
+            String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, books.ausgeliehen, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id";
             ResultSet queryResult = DatenbankMG.performQuery(sqlString);
             while (queryResult.next()) {
-                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getString(5));
+                Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getBoolean(5), queryResult.getString(6));
                 publicBooks.add(book);
             }
         } catch (Exception e) {

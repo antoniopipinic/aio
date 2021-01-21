@@ -6,13 +6,15 @@ public class Book {
     private String genre = null;
     private String isbn = null;
     private String owner = null;
+    private boolean isRead = false;
 
-    public Book(String title, String author, String genre, String isbn, String owner) {
+    public Book(String title, String author, String genre, String isbn, boolean isRead, String owner) {
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.isbn = isbn;
         this.owner = owner;
+        this.isRead = isRead;
     }
 
     public String getOwner() {
@@ -35,6 +37,8 @@ public class Book {
         return isbn;
     }
 
+    public boolean getIsRead() {return isRead;};
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -49,5 +53,9 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public void setIsRead(boolean isRead) {
+        this.isRead = isRead;
     }
 }
