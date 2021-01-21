@@ -78,6 +78,8 @@ public class MainController {
         isReadColumnPublic.setCellValueFactory(new PropertyValueFactory<>("isRead"));
         ownerColumnPublic.setCellValueFactory(new PropertyValueFactory<>("owner"));
 
+        welcomeMessage.setText("Willkommen, "+Data.getFullName());
+
         //Getting all private Books from DB
         try {
             String sqlString = "SELECT books.title, books.autor, books.genre, books.isbn, books.ausgeliehen, users.fullname FROM books INNER JOIN users ON books.fk_user_id=users.id where users.email = '" + Data.getUsername() + "'";
@@ -85,7 +87,6 @@ public class MainController {
             while (queryResult.next()) {
                 Book book = new Book(queryResult.getString(1), queryResult.getString(2), queryResult.getString(3), queryResult.getString(4),queryResult.getBoolean(5), queryResult.getString(6));
                 books.add(book);
-                welcomeMessage.setText("Willkommen, "+Data.getFullName());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,86 +109,6 @@ public class MainController {
         tableView.getItems().addAll(books);
         //Showing all public books
         publicLibraryTableView.getItems().addAll(publicBooks);
-
-        // Private Search
-        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
-        FilteredList<Book> filteredData = new FilteredList<>(books, b -> true);
-
-        // 2. Set the filter Predicate whenever the filter changes.
-        fastSearchField.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(book -> {
-                // If filter text is empty, display all books.
-
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-
-                // Compare title, genre, author with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
-
-                if (book.getTitle().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
-                    return true; // Filter matches first name.
-                } else if (book.getAuthor().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches last name.
-                }
-                else if (book.getGenre().toLowerCase().indexOf(lowerCaseFilter)!=-1)
-                    return true;
-                else
-                    return false; // Does not match.
-            });
-        });
-
-        // 3. Wrap the FilteredList in a SortedList.
-        SortedList<Book> sortedData = new SortedList<>(filteredData);
-
-
-        // 4. Bind the SortedList comparator to the TableView comparator.
-        // 	  Otherwise, sorting the TableView would have no effect.
-        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
-
-        // 5. Add sorted (and filtered) data to the table.
-        tableView.setItems(sortedData);
-
-
-        //Public Search
-        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
-        FilteredList<Book> publicFilteredData = new FilteredList<>(publicBooks, b -> true);
-
-        // 2. Set the filter Predicate whenever the filter changes.
-        fastSearchField.textProperty().addListener((observable, oldValue, newValue) -> {
-            publicFilteredData.setPredicate(book -> {
-                // If filter text is empty, display all books.
-
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-
-                // Compare title, author, genre with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
-
-                if (book.getTitle().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
-                    return true; // Filter matches title.
-                } else if (book.getAuthor().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches title.
-                }
-                else if (book.getGenre().toLowerCase().indexOf(lowerCaseFilter)!=-1)
-                    return true; // Filter matches Genre
-                else
-                    return false; // Does not match.
-            });
-        });
-
-        // 3. Wrap the FilteredList in a SortedList.
-        SortedList<Book> publicSortedData = new SortedList<>(publicFilteredData);
-
-        // 4. Bind the SortedList comparator to the TableView comparator.
-        // 	  Otherwise, sorting the TableView would have no effect.
-        publicSortedData.comparatorProperty().bind(publicLibraryTableView.comparatorProperty());
-
-        // 5. Add sorted (and filtered) data to the table.
-        publicLibraryTableView.setItems(publicSortedData);
-
-
         //Show Detailpage when clicking on a book
         tableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -216,7 +137,6 @@ public class MainController {
         editButton.setOnAction(editButtonEvent);
         deleteButton.setOnAction(deleteButtonEvent);
 
-
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
         //LogOut Stage when clicking on logout img
@@ -238,6 +158,12 @@ public class MainController {
         }
     };
 
+    private final EventHandler<ActionEvent> searchButtonEvent = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            MainApp.easyScene.showScene("/searchPage.fxml");
+        }
+    };
 
     private final EventHandler<ActionEvent> editButtonEvent = new EventHandler<ActionEvent>() {
         @Override
