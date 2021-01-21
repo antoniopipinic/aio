@@ -29,20 +29,23 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="AIO-21: Implement logout function">
+    <list default="true" id="c0aec2e8-9d1c-40f2-9e81-87b7efcec310" name="Default Changelist" comment="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java">
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/AddPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/RegisterPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/registerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/EditPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/editPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/editPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
     </list>
-    <list id="a78c869a-ad4f-4fe3-9fde-cd853af463c6" name="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" comment="" />
-    <list id="846ae55c-fc54-4ce2-a144-1c5bf139f978" name="AIO-36: WarningLabel correct error" comment="" />
+    <list id="a5146909-f57c-4734-bfb4-a13fab4d6a90" name="AIO-15: Changed Edit Page (Design) and added Heading to Edit Page" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
@@ -74,6 +77,12 @@
                 <item name="aio" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="aio" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -161,7 +170,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="aio [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -169,7 +180,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -178,9 +189,11 @@
             <option value="run" />
           </list>
         </option>
-        <option name="vmOptions" />
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -193,7 +206,8 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79509741-e7d9-4e9a-9cb2-ac26a90150d7" name="Default Changelist" comment="" />
+      <changelist id="c0aec2e8-9d1c-40f2-9e81-87b7efcec310" name="Default Changelist" comment="AIO-15: Changed Edit Page (Design) and added Heading to Edit Page" />
+      <changelist id="a5146909-f57c-4734-bfb4-a13fab4d6a90" name="AIO-15: Changed Edit Page (Design) and added Heading to Edit Page" comment="" />
       <created>1604514597642</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -210,6 +224,10 @@
       <workItem from="1609664455317" duration="8244000" />
       <workItem from="1610907577667" duration="9217000" />
       <workItem from="1610992664493" duration="1865000" />
+      <workItem from="1611157287059" duration="386000" />
+      <workItem from="1611158197991" duration="155000" />
+      <workItem from="1611231289512" duration="4217000" />
+      <workItem from="1611238054332" duration="5364000" />
     </task>
     <task id="LOCAL-00001" summary="AIO-4: Initial commit with gradle">
       <created>1605444980730</created>
@@ -323,7 +341,42 @@
       <option name="project" value="LOCAL" />
       <updated>1610313696277</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="AIO-15: Changed EditPage to match design">
+      <created>1611158296278</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611158296278</updated>
+    </task>
+    <task id="LOCAL-00018" summary="AIO-37: Added the function for displaying reading a book">
+      <created>1611237859322</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611237859322</updated>
+    </task>
+    <task id="LOCAL-00019" summary="AIO-37: Added the function for displaying reading a book (Version 2.)&#10;Small error fixes and design fixes">
+      <created>1611242379536</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611242379536</updated>
+    </task>
+    <task id="LOCAL-00020" summary="AIO-37: Added the function for displaying reading a book (Version 3.0)&#10;Small error fixes and design fixes">
+      <created>1611242515846</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611242515846</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java">
+      <created>1611242612275</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611242612275</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,29 +420,12 @@
     <MESSAGE value="AIO-21: Implement logout function" />
     <MESSAGE value="AIO-33: added Beenden Button am LogIn Screen" />
     <MESSAGE value="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" />
-    <option name="LAST_COMMIT_MESSAGE" value="AIO-36: Introducing WarningLabel &amp; correcting spelling mistakes &amp; design" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom" timestamp="1611000378782">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611000378782" />
-    <state width="1493" height="186" key="GridCell.Tab.0.center" timestamp="1611000378781">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611000378781" />
-    <state width="1493" height="186" key="GridCell.Tab.0.left" timestamp="1611000378781">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611000378781" />
-    <state width="1493" height="186" key="GridCell.Tab.0.right" timestamp="1611000378782">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611000378782" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1610999761782">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1610999761782" />
+    <MESSAGE value="AIO-15: Changed EditPage to match design" />
+    <MESSAGE value="AIO-37: Added the function for displaying reading a book" />
+    <MESSAGE value="AIO-37: Added the function for displaying reading a book (Version 2.)&#10;Small error fixes and design fixes" />
+    <MESSAGE value="AIO-37: Added the function for displaying reading a book (Version 3.0)&#10;Small error fixes and design fixes" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main' into main&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/org/openjfx/EditPageController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,6 +4,7 @@ import helper.DatenbankMG;
 import helper.EasyScene;
 import javafx.application.*;
 import javafx.stage.*;
+import java.nio.charset.Charset;
 
 public class MainApp extends Application {
 
@@ -17,7 +18,6 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         DatenbankMG.connectToDB();
-
         easyScene.loadPrimaryStage(primaryStage);
         easyScene.showScene("/login.fxml");
     }

@@ -69,7 +69,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fx:id="titleText" layoutX="221.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
+            <Text fx:id="titleText" layoutX="170.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchliste" wrappingWidth="286.0">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>

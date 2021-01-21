@@ -23,8 +23,8 @@ public class EditPageController {
     private WarningLabel errorLabel;
     @FXML
     private ChoiceBox isReadBox = new ChoiceBox();
-    public final String LABEL_VERFUEGBAR="verf\u00fcgbar";
-    public final String LABEL_NICHT_VERFUEGBAR="nicht verf\u00fcgbar";
+    public final String LABEL_VERFUEGBAR="verfügbar";
+    public final String LABEL_NICHT_VERFUEGBAR="nicht verfügbar";
     @FXML
     private void save(){
         if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
