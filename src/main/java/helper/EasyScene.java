@@ -103,6 +103,6 @@ public class EasyScene {
             stage.close();
         }
 
-        ;
+
     };
 }

@@ -17,7 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-
 import java.sql.ResultSet;
 
 public class MainController {
@@ -126,12 +125,12 @@ public class MainController {
                 // Compare title, genre, author with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (book.getTitle().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                if (book.getTitle().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches first name.
-                } else if (book.getAuthor().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                } else if (book.getAuthor().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches last name.
                 }
-                else if (book.getGenre().toLowerCase().indexOf(lowerCaseFilter)!=-1)
+                else if (book.getGenre().toLowerCase().contains(lowerCaseFilter))
                     return true;
                 else
                     return false; // Does not match.
@@ -166,14 +165,14 @@ public class MainController {
                 // Compare title, author, genre with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (book.getTitle().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                if (book.getTitle().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches title.
-                } else if (book.getAuthor().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                } else if (book.getAuthor().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches title.
                 }
-                else if (book.getGenre().toLowerCase().indexOf(lowerCaseFilter)!=-1)
+                else if (book.getGenre().toLowerCase().contains(lowerCaseFilter))
                     return true; // Filter matches Genre
-                else
+                else//
                     return false; // Does not match.
             });
         });
@@ -216,7 +215,6 @@ public class MainController {
         addButton.setOnAction(addButtonEvent);
         editButton.setOnAction(editButtonEvent);
         deleteButton.setOnAction(deleteButtonEvent);
-
 
         //Close Stage when clicking on off IMG
         offIMG.setOnMouseClicked(offClickedEvent);
@@ -265,7 +263,7 @@ public class MainController {
         @Override
         public void handle(ActionEvent event) {
             if (tableView.getSelectionModel().getSelectedItem() != null) {
-                //passing selected book to the editpage
+                //passing selected book to the deletepage
                 Data.setDataString(((Book) tableView.getSelectionModel().getSelectedItem()).getTitle());
             }
             //warning when there is no book selected

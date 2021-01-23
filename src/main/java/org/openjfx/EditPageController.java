@@ -25,19 +25,6 @@ public class EditPageController {
     private ChoiceBox isReadBox = new ChoiceBox();
     public final String LABEL_VERFUEGBAR="verfügbar";
     public final String LABEL_NICHT_VERFUEGBAR="nicht verfügbar";
-    @FXML
-    private void save(){
-        if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
-            errorLabel.showError();
-        } else {
-            int read = isReadBox.getValue().toString().equalsIgnoreCase(LABEL_VERFUEGBAR)? 1 : 0;
-            String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"',ausgeliehen='"+read+"'WHERE title='"+Data.getDataString()+ "';";
-            DatenbankMG.performUpdate(SQLfetch);
-
-            //Go back to main Page
-            MainApp.easyScene.showScene("/main.fxml");
-        }
-    }
 
     @FXML
     protected void initialize() {
@@ -60,6 +47,20 @@ public class EditPageController {
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
+        }
+    }
+
+    @FXML
+    private void save(){
+        if (titleTextField.getText().isBlank() ||authorTextField.getText().isBlank() || genreTextField.getText().isBlank() || ISBNTextField.getText().isBlank()) {
+            errorLabel.showError();
+        } else {
+            int read = isReadBox.getValue().toString().equalsIgnoreCase(LABEL_VERFUEGBAR)? 1 : 0;
+            String SQLfetch = "UPDATE books SET title='"+titleTextField.getText()+"',autor='"+authorTextField.getText()+"',genre='"+genreTextField.getText()+"',isbn='"+ISBNTextField.getText()+"',ausgeliehen='"+read+"'WHERE title='"+Data.getDataString()+ "';";
+            DatenbankMG.performUpdate(SQLfetch);
+
+            //Go back to main Page
+            MainApp.easyScene.showScene("/main.fxml");
         }
     }
 
